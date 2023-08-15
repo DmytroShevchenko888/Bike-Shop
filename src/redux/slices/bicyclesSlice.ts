@@ -1,17 +1,31 @@
 import { PayloadAction, createSlice, AnyAction } from "@reduxjs/toolkit";
 
-import { fetchAllBicycles } from "../thunks";
+import { fetchAllBicycles, fetchOneBicycle } from "../thunks";
 
 type TypeInitialState = {
-  items: BicycleType[] | [];
-  isLoaded: boolean;
-  error: string | null;
+  bicycles: {
+    allbicycles: BicycleType[] | [];
+    isLoaded: boolean;
+    error: string | null;
+  };
+  bicycle: {
+    currentbicycle: BicycleType[] | null;
+    isLoaded: boolean;
+    error: string | null;
+  };
 };
 
 const initialState: TypeInitialState = {
-  items: [],
-  isLoaded: false,
-  error: null,
+  bicycles: {
+    allbicycles: [],
+    isLoaded: true,
+    error: null,
+  },
+  bicycle: {
+    currentbicycle: null,
+    isLoaded: true,
+    error: null,
+  },
 };
 
 const bicyclesSlice = createSlice({
@@ -19,23 +33,37 @@ const bicyclesSlice = createSlice({
   initialState,
   reducers: {
     changeIsLoaded(state, action: PayloadAction<boolean>) {
-      state.isLoaded = action.payload;
+      state.bicycles.isLoaded = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchAllBicycles.pending, (state) => {
-        state.isLoaded = true;
-        state.error = null;
+        state.bicycles.isLoaded = true;
+        state.bicycles.error = null;
       })
       .addCase(fetchAllBicycles.fulfilled, (state, action) => {
-        state.items = action.payload;
-        state.isLoaded = false;
+        state.bicycles.allbicycles = action.payload;
+        state.bicycles.isLoaded = false;
+      })
+
+      .addCase(fetchOneBicycle.pending, (state) => {
+        state.bicycle.isLoaded = true;
+        state.bicycle.error = null;
+      })
+      .addCase(fetchOneBicycle.fulfilled, (state, action) => {
+        state.bicycle.currentbicycle = action.payload;
+        state.bicycle.isLoaded = false;
       })
 
       .addMatcher(isError, (state, action) => {
-        state.error = action.error.message;
-        state.isLoaded = false;
+        if (action.type === "bicycles/fetchOneBicycle/rejected") {
+          state.bicycle.error = action.error.message;
+          state.bicycle.isLoaded = false;
+        } else {
+          state.bicycles.error = action.error.message;
+          state.bicycles.isLoaded = false;
+        }
       });
   },
 });
