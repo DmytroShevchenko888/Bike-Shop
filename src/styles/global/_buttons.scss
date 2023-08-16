@@ -1,0 +1,18 @@
+@use "./colors" as *;
+@use "./typography" as *;
+
+
+.standart-btn{
+    color: $white-1;
+    font: $text-d-btn;
+    background: $bt-orange-normal;
+    width: 180px;
+    height: 52px;
+    border-radius: 10px;
+    &:hover{
+        background: $bt-orange-hover;
+    }
+    &:active{
+        background: $bt-orange-pressed;
+    }
+}
