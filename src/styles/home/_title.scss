@@ -1,0 +1,15 @@
+@use '../global' as *;
+
+.title{
+    background-image: url(/src/images/main.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container{
+        .content{
+            
+        }
+    }
+}
+
+@media (max-width:$breakpoint_xxl) {}
