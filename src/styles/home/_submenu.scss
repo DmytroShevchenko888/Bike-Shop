@@ -1,0 +1,137 @@
+@use "../global" as *;
+
+.submenu {
+  display: flex;
+  width: 100%;
+  position: relative;
+
+  &__wrapper {
+    position: absolute;
+    height: 212px;
+    padding: 48px;
+
+    &:nth-child(1) {
+      background-color: $black-1;
+      width: 37.5%;
+      left: 0;
+      &:hover {
+        border-radius: 0px 10px 10px 0px;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $black-2;
+      width: 25%;
+      left: 37.5%;
+      &:hover {
+        border-radius: 10px;
+      }
+    }
+    &:nth-child(3) {
+      background-color: $black-4;
+      width: 37.5%;
+      right: 0;
+      &:hover {
+        border-radius: 10px 0px 0px 10px;
+      }
+    }
+
+    &:hover {
+      height: 276px;
+      top: -32px;
+      a {
+        display: block;
+      }
+    }
+
+    p {
+      font: $title-d-hi2;
+      color: $white-1;
+      padding-bottom: 40px;
+    }
+
+    a {
+      display: none;
+      font: $text-d-btn;
+      color: $orange-1;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+}
+
+@media (max-width: $breakpoint_xl) {
+  .submenu {
+    &__wrapper {
+      &:nth-child(1) {
+        width: 33%;
+        left: 0;
+      }
+      &:nth-child(2) {
+        width: 34%;
+        left: 33%;
+      }
+      &:nth-child(3) {
+        width: 33%;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  .submenu {
+    display: flex;
+    width: unset;
+    position: static;
+    overflow: scroll;
+
+    //__________hidden scroll
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    &__wrapper {
+      position: static;
+      height: 180px;
+      min-width: 260px;
+      padding: 20px 24px 25px 33px;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        background-color: $black-1;
+        border: unset;
+        width: unset;
+        left: unset;
+        &:hover {
+          border-radius: unset;
+        }
+      }
+
+      &:hover {
+        height: unset;
+        top: unset;
+        a {
+          display: unset;
+        }
+      }
+
+      p {
+        font: $title-m-hi5;
+        color: $white-1;
+        padding-bottom: 40px;
+      }
+
+      a {
+        display: block;
+        font: $text-m-btn;
+        color: $orange-1;
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint_sm) {
+}
