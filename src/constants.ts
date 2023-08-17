@@ -46,4 +46,9 @@ export const colorBicycles = [
   //... can add yet
 ];
 
+export const ROUTES = {
+  HOME : '/',
+  NOT_FOUND : '*',
+}
+
 export const sizeBicycles = ["XXS", "XS", "S", "M", "L", "XL", "XXL"];

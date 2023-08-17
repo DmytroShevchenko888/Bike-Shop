@@ -8,6 +8,15 @@
   text-decoration: none;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -51,4 +60,61 @@ body {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #8A0E0C;
+}
+
+.standart-btn {
+  color: #FFFFFF;
+  font: 500 16px/19.68px "Inter", sans-serif;
+  background: #F57520;
+  width: 180px;
+  height: 52px;
+  border-radius: 10px;
+}
+.standart-btn:hover {
+  background: #F57F2A;
+}
+.standart-btn:active {
+  background: #E1610C;
+}
+
+.title {
+  background-image: url(/src/images/home/main.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.title .container .content .title-box {
+  padding-top: 160px;
+}
+.title .container .content .title-box h1 {
+  font: 400 110px/135.3px "Bebas Neue", sans-serif;
+  color: #FFFFFF;
+}
+.title .container .content .title-box p {
+  font: 300 18px/28.8px "Inter", sans-serif;
+  color: #FFFFFF;
+  margin: 40px 0;
+  max-width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .title .container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 576px) {
+  .title {
+    background-position: 63%;
+  }
+  .title .container {
+    padding: 0 20px;
+  }
+  .title .container .content .title-box h1 {
+    font: 400 60px/73.8px "Bebas Neue", sans-serif;
+  }
+  .title .container .content .title-box p {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

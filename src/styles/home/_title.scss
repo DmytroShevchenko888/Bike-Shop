@@ -1,0 +1,55 @@
+@use '../global' as *;
+
+.title{
+    background-image: url(/src/images/home/main.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    .container{
+        .content{
+            .title-box{
+                padding-top: 160px;
+                
+                h1{
+                    font: $title-d-h1;
+                    color: $white-1;
+                }
+                p{
+                    font: $title-d-hi5;
+                    color: $white-1;
+                    margin: 40px 0;
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:$breakpoint_xxl) {
+    .title{
+        .container{
+            padding: 0 40px;
+        }
+    }
+}
+
+@media (max-width:$breakpoint_sm) {
+    .title{
+        background-position: 63%;
+        .container{
+            padding: 0 20px;
+            .content{
+              .title-box{
+                h1{
+                    font: $title-m-h1;
+                }
+                p{
+                    max-width: 100%;
+                }
+              }
+            }
+        }
+    }
+}
