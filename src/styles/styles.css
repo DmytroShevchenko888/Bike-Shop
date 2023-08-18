@@ -276,4 +276,77 @@ body {
       transform: translateX(-2516.5px);
     }
   }
+}
+.item-bicycle.inactive {
+  background-color: unset;
+  box-shadow: unset;
+}
+
+.item-bicycle {
+  position: relative;
+  height: 529px;
+  width: 400px;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
+  background-color: #FFFFFF;
+}
+.item-bicycle__flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px 0 10px 0px;
+}
+.item-bicycle__availability-true, .item-bicycle__availability-false {
+  float: right;
+  font: 400 16px/25.6px "Inter", sans-serif;
+}
+.item-bicycle__availability-true {
+  color: #4D932C;
+}
+.item-bicycle__availability-false {
+  color: #F53A20;
+}
+.item-bicycle__foto {
+  width: 368px;
+}
+.item-bicycle__fullName {
+  position: absolute;
+  bottom: 150px;
+  font: 300 18px/28.8px "Inter", sans-serif;
+  letter-spacing: 1%;
+}
+.item-bicycle__price {
+  position: absolute;
+  bottom: 106px;
+  font: 500 16px/19.68px "Inter", sans-serif;
+  color: #777777;
+}
+.item-bicycle__blockPrice {
+  position: absolute;
+  bottom: 106px;
+  display: flex;
+  align-items: flex-end;
+}
+.item-bicycle__blockPrice_sale {
+  font: 500 16px/19.68px "Inter", sans-serif;
+  color: #777777;
+  margin-right: 8px;
+}
+.item-bicycle__blockPrice_price {
+  font: 500 12px/14.76px "Inter", sans-serif;
+  text-decoration: line-through;
+  color: #B3B3B3;
+}
+.item-bicycle__btn {
+  position: absolute;
+  bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 368px;
+}
+.item-bicycle__btn p {
+  font: 500 16px/19.68px "Inter", sans-serif;
+  margin-left: 4px;
 }/*# sourceMappingURL=styles.css.map */

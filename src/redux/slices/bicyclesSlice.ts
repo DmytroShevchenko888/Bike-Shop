@@ -9,7 +9,7 @@ type TypeInitialState = {
     error: string | null;
   };
   bicycle: {
-    currentbicycle: BicycleType[] | null;
+    currentbicycle: BicycleType | null;
     isLoaded: boolean;
     error: string | null;
   };
@@ -52,6 +52,7 @@ const bicyclesSlice = createSlice({
         state.bicycle.error = null;
       })
       .addCase(fetchOneBicycle.fulfilled, (state, action) => {
+        //@ts-ignore
         state.bicycle.currentbicycle = action.payload;
         state.bicycle.isLoaded = false;
       })

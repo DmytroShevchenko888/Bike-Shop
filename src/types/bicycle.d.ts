@@ -1,6 +1,6 @@
 type ImageType = {
-  color: String;
-  image: String;
+  color: string;
+  image: string;
 };
 
 type BicycleType = {
