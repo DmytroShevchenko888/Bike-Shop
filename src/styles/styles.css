@@ -200,7 +200,7 @@ body {
   }
   .submenu__wrapper {
     position: static;
-    height: 180px;
+    height: 100%;
     min-width: 260px;
     padding: 20px 24px 25px 33px;
   }
