@@ -16,10 +16,8 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
   price,
   priceSale,
 }) => {
-  const isActiveItem = availability ? "" : "inactive";
-
   return (
-    <div className={`item-bicycle ${isActiveItem}`}>
+    <div className={`item-bicycle`}>
       <img
         src={getImageUrl("home", "italy.svg")}
         className="item-bicycle__flag"
@@ -30,11 +28,8 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
       ) : (
         <span className="item-bicycle__availability-false">sold out</span>
       )}
-
       <img className="item-bicycle__foto" src={image[0].image} alt="foto" />
-
       <p className="item-bicycle__fullName">{fullName}</p>
-
       {price === priceSale ? (
         <p className="item-bicycle__price">{price} $</p>
       ) : (
@@ -43,12 +38,14 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
           <p className="item-bicycle__blockPrice_price">{price} $</p>
         </div>
       )}
-      {availability && (
-        <button className="item-bicycle__btn standart-btn">
-          <img src={getImageUrl("home", "click.svg")} alt="click" />
-          <p>In 1 click</p>
-        </button>
-      )}
+      <button
+        className={`item-bicycle__btn ${
+          availability ? "" : "inactive"
+        } standart-btn`}
+      >
+        <img src={getImageUrl("home", "click.svg")} alt="click" />
+        <p>In 1 click</p>
+      </button>
     </div>
   );
 };

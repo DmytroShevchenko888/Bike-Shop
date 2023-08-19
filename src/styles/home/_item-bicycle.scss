@@ -1,21 +1,42 @@
 @use "../global" as *;
 
-.item-bicycle.inactive {
-  background-color: unset;
-  box-shadow: unset;
-}
-
 .item-bicycle {
   position: relative;
 
-  height: 529px;
+  height: 423px;
   width: 400px;
   padding: 16px;
   border-radius: 10px;
 
-  box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
+  &:hover {
+    background-color: $bg-white;
+    box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
+    height: 529px;
 
-  background-color: $bg-white;
+    .item-bicycle__btn,
+    .standart-btn {
+      display: block;
+    }
+
+    .item-bicycle__btn {
+      position: absolute;
+      bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 368px;
+
+      p {
+        font: $text-d-btn;
+        margin-left: 4px;
+      }
+    }
+
+    .inactive {
+      background-color: $gray-3;
+      cursor: not-allowed;
+    }
+  }
 
   &__flag {
     position: absolute;
@@ -44,7 +65,7 @@
 
   &__fullName {
     position: absolute;
-    bottom: 150px;
+    top: 321px;
 
     font: $title-d-hi5;
     letter-spacing: 1%;
@@ -52,7 +73,7 @@
 
   &__price {
     position: absolute;
-    bottom: 106px;
+    top: 403px;
 
     font: $text-d-btn;
     color: $gray-2;
@@ -60,7 +81,7 @@
 
   &__blockPrice {
     position: absolute;
-    bottom: 106px;
+    top: 403px;
 
     display: flex;
     align-items: flex-end;
@@ -78,18 +99,9 @@
     }
   }
 
-  &__btn {
-    position: absolute;
-    bottom: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 368px;
-
-    p {
-      font: $text-d-btn;
-      margin-left: 4px;
-    }
+  &__btn,
+  .standart-btn {
+    display: none;
   }
 }
 
