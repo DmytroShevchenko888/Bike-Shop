@@ -4,8 +4,8 @@ import { fetchAllBicycles } from "../../redux/thunks";
 import { getImageUrl } from "../../helpers/getImageUrl";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 
-import ItemBicycle from "../ItemBicycle/index";
-import SkeketonItemBicycle from "../ItemBicycle/SkeletonItemBicycle";
+import ItemBicycle from "./ItemBicycle/index";
+import SkeketonItemBicycle from "./ItemBicycle/SkeletonItemBicycle";
 
 interface NewBicyclesProps {}
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { getImageUrl } from "../../helpers/getImageUrl";
+import { getImageUrl } from "../../../helpers/getImageUrl";
 
 interface ItemBicycleProps {
   availability: boolean;

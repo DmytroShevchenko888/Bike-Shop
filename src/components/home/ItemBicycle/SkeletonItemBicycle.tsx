@@ -1,5 +1,5 @@
 import ContentLoader from "react-content-loader";
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+import { useMediaQuery } from "../../../hooks/useMediaQuery";
 
 const SkeketonItemBicycle = (props: any) => {
   const breakpoint_xl = useMediaQuery("(max-width: 1024px)");
