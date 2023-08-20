@@ -284,12 +284,17 @@ body {
   background-color: #FFFFFF;
 }
 
+.item-bicycle__btn.inactive {
+  background-color: #B3B3B3;
+}
+
 .item-bicycle {
   position: relative;
   height: 443px;
   width: 400px;
   padding: 16px;
   border-radius: 10px;
+  z-index: 1;
 }
 .item-bicycle:hover {
   background-color: #FFFFFF;
@@ -425,6 +430,93 @@ body {
     margin-left: 4px;
   }
 }
+@media (max-width: 576px) {
+  .item-bicycle {
+    width: 100%;
+    padding: 8px;
+  }
+  .item-bicycle:hover .item-bicycle__btn {
+    width: calc(100% - 16px);
+  }
+  .item-bicycle__foto {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+  }
+  .item-bicycle__fullName {
+    top: 270px;
+    font: 300 18px/28.8px "Inter", sans-serif;
+  }
+  .item-bicycle .item-bicycle__btn {
+    width: calc(100% - 16px);
+  }
+  .item-bicycle .item-bicycle__btn p {
+    font: 500 16px/19.68px "Inter", sans-serif;
+    margin-left: 4px;
+  }
+}
+.items-bicycle__btn .white {
+  color: #FFFFFF;
+}
+
+.items-bicycle {
+  position: relative;
+  width: 100%;
+}
+.items-bicycle__block {
+  height: 529px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.items-bicycle__left-arrow, .items-bicycle__right-arrow {
+  z-index: 2;
+  position: absolute;
+  top: 226px;
+  cursor: pointer;
+}
+.items-bicycle__left-arrow {
+  left: 0;
+}
+.items-bicycle__right-arrow {
+  right: 0;
+}
+.items-bicycle__btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 400 12px/19.2px "Inter", sans-serif;
+}
+.items-bicycle__btn.white-text {
+  color: #FFFFFF;
+}
+
+@media (max-width: 1290px) {
+  .items-bicycle__block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .items-bicycle__left-arrow, .items-bicycle__right-arrow {
+    position: absolute;
+    top: 226px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 767px) {
+  .items-bicycle__block {
+    justify-content: center;
+  }
+}
 .new-bicycles {
   position: relative;
   margin-top: 66px;
@@ -436,45 +528,11 @@ body {
   padding-bottom: 80px;
   font: 400 64px/78.72px "Bebas Neue", sans-serif;
 }
-.new-bicycles__items {
-  height: 529px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-}
-.new-bicycles__left-arrow, .new-bicycles__right-arrow {
-  position: absolute;
-  top: 442px;
-  cursor: pointer;
-}
-.new-bicycles__left-arrow {
-  left: 0;
-}
-.new-bicycles__right-arrow {
-  right: 0;
-}
-.new-bicycles__btn {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font: 400 12px/19.2px "Inter", sans-serif;
-}
 
 @media (max-width: 1290px) {
-  .new-bicycles h2 {
+  .new-bicycles {
     padding-left: 20px;
-  }
-  .new-bicycles__items {
-    padding: 0px 20px;
-  }
-  .new-bicycles__left-arrow {
-    left: 20px;
-  }
-  .new-bicycles__right-arrow {
-    right: 20px;
+    padding-right: 20px;
   }
 }
 @media (max-width: 1024px) {
@@ -488,15 +546,35 @@ body {
     padding-bottom: 32px;
     font: 400 64px/78.72px "Bebas Neue", sans-serif;
   }
-  .new-bicycles__items {
-    height: 441px;
+}
+.winter-bicycles {
+  position: relative;
+  background-image: url(/src/images/home/winter-bicycles-bg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 771px;
+  width: 100%;
+}
+.winter-bicycles .container h2 {
+  padding-top: 80px;
+  color: #FFFFFF;
+  font: 400 64px/78.72px "Bebas Neue", sans-serif;
+}
+.winter-bicycles__items {
+  position: absolute;
+  right: 10px;
+}
+
+@media (max-width: 1290px) {
+  .winter-bicycles {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .new-bicycles__left-arrow, .new-bicycles__right-arrow {
-    position: absolute;
-    top: 352px;
-    cursor: pointer;
-  }
-  .new-bicycles__btn {
-    bottom: 40px;
+}
+@media (max-width: 576px) {
+  .winter-bicycles__items {
+    right: 20px;
+    width: calc(100% - 40px);
   }
 }/*# sourceMappingURL=styles.css.map */

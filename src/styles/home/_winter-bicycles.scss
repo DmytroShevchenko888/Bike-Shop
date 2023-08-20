@@ -1,0 +1,41 @@
+@use "../global" as *;
+
+.winter-bicycles {
+  position: relative;
+
+  background-image: url(/src/images/home/winter-bicycles-bg.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 771px;
+  width: 100%;
+  .container {
+    h2 {
+      padding-top: 80px;
+      color: $white-1;
+      font: $title-d-h2;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+  .winter-bicycles {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: $breakpoint_sm) {
+  .winter-bicycles {
+    &__items {
+      right: 20px;
+      width: calc(100% - 40px);
+    }
+  }
+}

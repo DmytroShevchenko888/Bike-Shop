@@ -1,0 +1,79 @@
+@use "../global" as *;
+
+.items-bicycle__btn .white {
+  color: $white-1;
+}
+
+.items-bicycle {
+  position: relative;
+  width: 100%;
+
+  &__block {
+    height: 529px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 40px;
+  }
+
+  &__left-arrow,
+  &__right-arrow {
+    z-index: 2;
+    position: absolute;
+    top: 226px;
+
+    cursor: pointer;
+  }
+
+  &__left-arrow {
+    left: 0;
+  }
+
+  &__right-arrow {
+    right: 0;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font: $text-d-pi3;
+  }
+  &__btn.white-text {
+    color: $white-1;
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+  .items-bicycle {
+    &__block {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      column-gap: 40px;
+    }
+  }
+}
+@media (max-width: $breakpoint_xl) {
+  .items-bicycle {
+    &__left-arrow,
+    &__right-arrow {
+      position: absolute;
+      top: 226px;
+
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: $breakpoint_md) {
+  .items-bicycle {
+    &__block {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: $breakpoint_sm) {
+}

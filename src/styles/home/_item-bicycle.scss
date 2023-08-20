@@ -4,6 +4,10 @@
   background-color: $bg-white;
 }
 
+.item-bicycle__btn.inactive {
+  background-color: $gray-3;
+}
+
 .item-bicycle {
   position: relative;
 
@@ -12,6 +16,7 @@
   padding: 16px;
   border-radius: 10px;
 
+  z-index: 1;
   &:hover {
     background-color: $bg-white;
     box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
@@ -185,4 +190,38 @@
 @media (max-width: $breakpoint_md) {
 }
 @media (max-width: $breakpoint_sm) {
+  .item-bicycle {
+    width: 100%;
+    padding: 8px;
+
+    &:hover {
+      .item-bicycle__btn {
+        width: calc(100% - 16px);
+      }
+    }
+
+    &__foto {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      padding: 0;
+    }
+
+    &__fullName {
+      top: 270px;
+
+      font: $title-m-hi5;
+    }
+
+    .item-bicycle__btn {
+      width: calc(100% - 16px);
+
+      p {
+        font: $text-d-btn;
+        margin-left: 4px;
+      }
+    }
+  }
 }
