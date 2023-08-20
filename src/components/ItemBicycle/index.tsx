@@ -7,6 +7,7 @@ interface ItemBicycleProps {
   fullName: string;
   price: number;
   priceSale: number;
+  backgroundWhite?: boolean;
 }
 
 const ItemBicycle: React.FC<ItemBicycleProps> = ({
@@ -15,9 +16,12 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
   fullName,
   price,
   priceSale,
+  backgroundWhite,
 }) => {
+  const showFullName50chars = fullName.slice(0, 50) + "...";
+
   return (
-    <div className={`item-bicycle`}>
+    <div className={`item-bicycle ${backgroundWhite ? "bg-white" : ""}`}>
       <img
         src={getImageUrl("home", "italy.svg")}
         className="item-bicycle__flag"
@@ -29,7 +33,7 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
         <span className="item-bicycle__availability-false">sold out</span>
       )}
       <img className="item-bicycle__foto" src={image[0].image} alt="foto" />
-      <p className="item-bicycle__fullName">{fullName}</p>
+      <p className="item-bicycle__fullName">{showFullName50chars}</p>
       {price === priceSale ? (
         <p className="item-bicycle__price">{price} $</p>
       ) : (

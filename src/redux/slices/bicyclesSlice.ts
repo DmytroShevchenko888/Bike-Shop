@@ -18,12 +18,12 @@ type TypeInitialState = {
 const initialState: TypeInitialState = {
   bicycles: {
     allbicycles: [],
-    isLoaded: true,
+    isLoaded: false,
     error: null,
   },
   bicycle: {
     currentbicycle: null,
-    isLoaded: true,
+    isLoaded: false,
     error: null,
   },
 };
@@ -39,22 +39,22 @@ const bicyclesSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchAllBicycles.pending, (state) => {
-        state.bicycles.isLoaded = true;
+        state.bicycles.isLoaded = false;
         state.bicycles.error = null;
       })
       .addCase(fetchAllBicycles.fulfilled, (state, action) => {
         state.bicycles.allbicycles = action.payload;
-        state.bicycles.isLoaded = false;
+        state.bicycles.isLoaded = true;
       })
 
       .addCase(fetchOneBicycle.pending, (state) => {
-        state.bicycle.isLoaded = true;
+        state.bicycle.isLoaded = false;
         state.bicycle.error = null;
       })
       .addCase(fetchOneBicycle.fulfilled, (state, action) => {
         //@ts-ignore
         state.bicycle.currentbicycle = action.payload;
-        state.bicycle.isLoaded = false;
+        state.bicycle.isLoaded = true;
       })
 
       .addMatcher(isError, (state, action) => {

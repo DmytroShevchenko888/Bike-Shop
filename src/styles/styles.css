@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
 }
-* ul, * li, * a {
+* ul,
+* li,
+* a {
   list-style: none;
   text-decoration: none;
 }
@@ -27,6 +29,7 @@ body {
 }
 
 .container {
+  position: relative;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -51,15 +54,15 @@ body {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: #8A0E0C;
+  background-color: #8a0e0c;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #8A0E0C;
+  background-color: #8a0e0c;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: #8A0E0C;
+  background-color: #8a0e0c;
 }
 
 .standart-btn {
@@ -99,7 +102,7 @@ body {
   max-width: 50%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1290px) {
   .title .container {
     padding: 0 40px;
   }
@@ -277,9 +280,13 @@ body {
     }
   }
 }
+.item-bicycle.bg-white {
+  background-color: #FFFFFF;
+}
+
 .item-bicycle {
   position: relative;
-  height: 423px;
+  height: 443px;
   width: 400px;
   padding: 16px;
   border-radius: 10px;
@@ -326,6 +333,7 @@ body {
   color: #F53A20;
 }
 .item-bicycle__foto {
+  padding-top: 10px;
   width: 368px;
 }
 .item-bicycle__fullName {
@@ -359,4 +367,136 @@ body {
 .item-bicycle__btn,
 .item-bicycle .standart-btn {
   display: none;
+}
+
+@media (max-width: 1024px) {
+  .item-bicycle {
+    height: 441px;
+    width: 290px;
+    padding: 8px;
+  }
+  .item-bicycle:hover {
+    height: 441px;
+  }
+  .item-bicycle:hover .item-bicycle__btn {
+    bottom: 8px;
+    width: 274px;
+  }
+  .item-bicycle:hover .item-bicycle__btn p {
+    font: 500 16px/19.68px "Inter", sans-serif;
+  }
+  .item-bicycle__availability-true, .item-bicycle__availability-false {
+    font: 400 16px/25.6px "Inter", sans-serif;
+  }
+  .item-bicycle__foto {
+    width: 274px;
+  }
+  .item-bicycle__fullName {
+    top: 257px;
+    font: 300 18px/28.8px "Inter", sans-serif;
+  }
+  .item-bicycle__price {
+    top: 331px;
+    font: 500 16px/19.68px "Inter", sans-serif;
+  }
+  .item-bicycle__blockPrice {
+    top: 331px;
+  }
+  .item-bicycle__blockPrice_sale {
+    font: 500 16px/19.68px "Inter", sans-serif;
+  }
+  .item-bicycle__blockPrice_price {
+    font: 500 12px/14.76px "Inter", sans-serif;
+  }
+  .item-bicycle .item-bicycle__btn,
+  .item-bicycle .standart-btn {
+    display: block;
+  }
+  .item-bicycle .item-bicycle__btn {
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 274px;
+  }
+  .item-bicycle .item-bicycle__btn p {
+    font: 500 16px/19.68px "Inter", sans-serif;
+    margin-left: 4px;
+  }
+}
+.new-bicycles {
+  position: relative;
+  margin-top: 66px;
+  height: 806px;
+  background-color: #E5E5E5;
+}
+.new-bicycles h2 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font: 400 64px/78.72px "Bebas Neue", sans-serif;
+}
+.new-bicycles__items {
+  height: 529px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.new-bicycles__left-arrow, .new-bicycles__right-arrow {
+  position: absolute;
+  top: 442px;
+  cursor: pointer;
+}
+.new-bicycles__left-arrow {
+  left: 0;
+}
+.new-bicycles__right-arrow {
+  right: 0;
+}
+.new-bicycles__btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 400 12px/19.2px "Inter", sans-serif;
+}
+
+@media (max-width: 1290px) {
+  .new-bicycles h2 {
+    padding-left: 20px;
+  }
+  .new-bicycles__items {
+    padding: 0px 20px;
+  }
+  .new-bicycles__left-arrow {
+    left: 20px;
+  }
+  .new-bicycles__right-arrow {
+    right: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .new-bicycles {
+    margin-top: 48px;
+    height: 700px;
+    background-color: #E5E5E5;
+  }
+  .new-bicycles h2 {
+    padding-top: 40px;
+    padding-bottom: 32px;
+    font: 400 64px/78.72px "Bebas Neue", sans-serif;
+  }
+  .new-bicycles__items {
+    height: 441px;
+  }
+  .new-bicycles__left-arrow, .new-bicycles__right-arrow {
+    position: absolute;
+    top: 352px;
+    cursor: pointer;
+  }
+  .new-bicycles__btn {
+    bottom: 40px;
+  }
 }/*# sourceMappingURL=styles.css.map */
