@@ -43,7 +43,9 @@ const bicyclesSlice = createSlice({
         state.bicycles.error = null;
       })
       .addCase(fetchAllBicycles.fulfilled, (state, action) => {
+        //@ts-ignore
         state.bicycles.allbicycles = action.payload;
+
         state.bicycles.isLoaded = true;
       })
 

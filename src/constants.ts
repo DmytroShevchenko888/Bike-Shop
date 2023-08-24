@@ -47,8 +47,10 @@ export const colorBicycles = [
 ];
 
 export const ROUTES = {
-  HOME : '/',
-  NOT_FOUND : '*',
-}
+  HOME: "/",
+  NOT_FOUND: "*",
+};
 
 export const sizeBicycles = ["XXS", "XS", "S", "M", "L", "XL", "XXL"];
+
+export const COUNT_PER_PAGE = 9;

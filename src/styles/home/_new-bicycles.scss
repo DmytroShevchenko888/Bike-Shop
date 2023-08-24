@@ -4,7 +4,7 @@
   position: relative;
   margin-top: 66px;
 
-  height: 806px;
+  height: 100%;
 
   background-color: $gray-4;
 
@@ -24,7 +24,7 @@
 @media (max-width: $breakpoint_xl) {
   .new-bicycles {
     margin-top: 48px;
-    height: 700px;
+
     background-color: $gray-4;
 
     h2 {

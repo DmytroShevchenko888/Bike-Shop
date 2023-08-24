@@ -9,12 +9,18 @@ import SkeketonItemBicycle from "./ItemBicycle/SkeletonItemBicycle";
 
 interface IItemsBicycleProps {
   btnWhite?: boolean;
-  searchOnFilter?: "MTB" | "electric";
+  bicycles: BicycleType[];
+  showMore: boolean;
+  setShowMore: (showMore: boolean) => void;
+  page: number;
 }
 
 const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
   btnWhite,
-  searchOnFilter,
+  bicycles,
+  showMore,
+  setShowMore,
+  page,
 }) => {
   // breakpoints adaptive
   const breakpoint_xxl = useMediaQuery("(max-width: 1290px)");
@@ -29,44 +35,39 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
     React.useState<number>(showAmountBicycles);
 
   const dispatch = useAppDispatch();
-
-  const { allbicycles, isLoaded } = useAppSelector(
-    (state) => state.bicycles.bicycles
-  );
+  const { isLoaded } = useAppSelector((state) => state.bicycles.bicycles);
 
   React.useEffect(() => {
-    dispatch(fetchAllBicycles());
+    dispatch(fetchAllBicycles({}));
 
     setFinishArray(showAmountBicycles);
-  }, [dispatch, showAmountBicycles]);
+  }, [dispatch, showAmountBicycles, page]);
 
-  const amountBicycles = allbicycles.filter((bicycle) =>
-    searchOnFilter ? bicycle.category === searchOnFilter : bicycle.novelty
-  ).length;
+  const amountBicycles = bicycles.length;
 
-  const showBicycles = allbicycles
-    .filter((bicycle) =>
-      searchOnFilter ? bicycle.category === searchOnFilter : bicycle.novelty
-    )
-    .slice(startArray, finishArray)
-    .map((obj) => (
-      <ItemBicycle
-        key={obj._id}
-        availability={obj.availability}
-        fullName={obj.fullName}
-        image={obj.image}
-        price={obj.price}
-        priceSale={obj.priceSale}
-        backgroundWhite
-      />
-    ));
+  const showBicycles = (
+    showMore ? bicycles : bicycles.slice(startArray, finishArray)
+  ).map((obj) => (
+    <ItemBicycle
+      key={obj._id}
+      availability={obj.availability}
+      fullName={obj.fullName}
+      image={obj.image}
+      price={obj.price}
+      priceSale={obj.priceSale}
+      backgroundWhite
+    />
+  ));
 
   const showLoader = [...new Array(3)]
     .slice(startArray, finishArray)
     .map((_, id) => <SkeketonItemBicycle key={id} />);
 
-  const showBtn = amountBicycles >= 3 && (
-    <button className={`items-bicycle__btn ${btnWhite ? "white-text" : ""}`}>
+  const showBtn = amountBicycles >= 3 && !showMore && (
+    <button
+      onClick={() => setShowMore(true)}
+      className={`items-bicycle__btn ${btnWhite ? "white-text" : ""}`}
+    >
       SHOW ALL
     </button>
   );
@@ -89,7 +90,7 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
     }
   };
 
-  const showLeftArrow = startArray !== 0 && (
+  const showLeftArrow = startArray !== 0 && !showMore && (
     <img
       className="items-bicycle__left-arrow"
       onClick={clickLeftArrow}
@@ -98,7 +99,7 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
     />
   );
 
-  const showRightArrow = amountBicycles > finishArray && (
+  const showRightArrow = amountBicycles > finishArray && !showMore && (
     <img
       className="items-bicycle__right-arrow"
       onClick={clickRightArrow}

@@ -2,14 +2,13 @@
 
 .winter-bicycles {
   position: relative;
-
   background-image: url(/src/images/home/winter-bicycles-bg.jpg);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 771px;
-  width: 100%;
+  height: 100%;
+  // width: 100%;
   .container {
     h2 {
       padding-top: 80px;
@@ -19,8 +18,9 @@
   }
 
   &__items {
-    position: absolute;
-    right: 10px;
+    height: 100%;
+    background-color: $black-3;
+    float: right;
   }
 }
 

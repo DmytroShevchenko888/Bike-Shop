@@ -466,12 +466,13 @@ body {
   width: 100%;
 }
 .items-bicycle__block {
-  height: 529px;
+  height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   -moz-column-gap: 40px;
        column-gap: 40px;
+  row-gap: 10px;
 }
 .items-bicycle__left-arrow, .items-bicycle__right-arrow {
   z-index: 2;
@@ -486,10 +487,12 @@ body {
   right: 0;
 }
 .items-bicycle__btn {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  margin-top: 48px;
+  position: relative;
+  display: block;
+  justify-content: center;
+  align-items: center;
   font: 400 12px/19.2px "Inter", sans-serif;
 }
 .items-bicycle__btn.white-text {
@@ -520,7 +523,7 @@ body {
 .new-bicycles {
   position: relative;
   margin-top: 66px;
-  height: 806px;
+  height: 100%;
   background-color: #E5E5E5;
 }
 .new-bicycles h2 {
@@ -538,7 +541,6 @@ body {
 @media (max-width: 1024px) {
   .new-bicycles {
     margin-top: 48px;
-    height: 700px;
     background-color: #E5E5E5;
   }
   .new-bicycles h2 {
@@ -553,8 +555,7 @@ body {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 771px;
-  width: 100%;
+  height: 100%;
 }
 .winter-bicycles .container h2 {
   padding-top: 80px;
@@ -562,8 +563,9 @@ body {
   font: 400 64px/78.72px "Bebas Neue", sans-serif;
 }
 .winter-bicycles__items {
-  position: absolute;
-  right: 10px;
+  height: 100%;
+  background-color: #34312D;
+  float: right;
 }
 
 @media (max-width: 1290px) {
@@ -577,4 +579,32 @@ body {
     right: 20px;
     width: calc(100% - 40px);
   }
+}
+.pagination {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination ul {
+  display: flex;
+  margin: 0px 10px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.pagination ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 46px;
+  border: 1px solid #B3B3B3;
+  border-radius: 10px;
+}
+.pagination ul .active {
+  background-color: #F57520;
+  border-color: #F57520;
+}
+.pagination ul .active a {
+  color: #FFFFFF;
 }/*# sourceMappingURL=styles.css.map */
