@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+.navbar{
+    position: absolute;
+    width: 100%;
+    z-index: 50;
+    .container{
+        .content{
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .bike-logo{
+
+            }
+            .nav-menu{
+                display: flex;
+                gap: 32px;
+                color: $tx-white;
+                font: $text-d-pi6;
+                text-transform: uppercase;
+                    li{
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        &:hover{
+                            color:$bt-orange-hover;
+                        }
+                        &:first-child {
+                            color: $tx-orange;
+                        }  
+                    }
+                }
+            .user-menu{
+                color: $tx-white;
+                font-size: 1.4rem;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                div{
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover{
+                        color:$bt-orange-hover;
+                    }
+                }
+                
+                .burger-menu{
+                    margin-left: 58px;
+                    color: $tx-white;
+                }
+                
+            }
+            
+        }
+    }
+}
+
+@media (max-width: $breakpoint_xxl) {
+.navbar{
+    .container{
+        .content{
+            .nav-menu{
+                display: none;
+            }
+        }
+    }
+}
+}
+
+@media (max-width: $breakpoint_sm) {
+    .navbar{
+        .container{
+            .content{
+                .user-menu{
+                    .burger-menu{
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    }

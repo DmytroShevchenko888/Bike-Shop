@@ -1,17 +1,20 @@
 @use "./colors" as *;
 @use "./typography" as *;
+@use "./screenSize" as *;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    ul,li,a{
-      list-style: none;
-      text-decoration: none;
-    }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  ul,
+  li,
+  a {
+    list-style: none;
+    text-decoration: none;
+  }
 }
 
-button{
+button {
   padding: 0;
   border: none;
   font: inherit;
@@ -21,48 +24,60 @@ button{
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    position: relative;
-    background-color: $bg-white;
-    
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: $bg-white;
+}
+
+.container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  //padding: 0 40px;
+}
+
+  @media (max-width: $breakpoint_xxl) {
+    .container{
+      padding: 0 40px;
+    }
   }
 
-  
-  .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    //padding: 0 40px;
+  @media (max-width: $breakpoint_md) {
+    .container{
+      padding: 0 20px;
+    }
   }
+
 
 *::-webkit-scrollbar {
-    width: 10px;
-    width: 10px;
-  }
-  *::-webkit-scrollbar-track {
-    border-radius: 4px;
-    background-color: #ffffff;
-  }
-  
-  *::-webkit-scrollbar-track:hover {
-    background-color: #ffffff;
-  }
-  
-  *::-webkit-scrollbar-track:active {
-    background-color: #ffffff;
-  }
-  
-  *::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background-color: #8A0E0C;
-  }
-  
-  *::-webkit-scrollbar-thumb:hover {
-    background-color: #8A0E0C;
-  }
-  
-  *::-webkit-scrollbar-thumb:active {
-    background-color: #8A0E0C;
-  }
+  width: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #8a0e0c;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #8a0e0c;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #8a0e0c;
+}

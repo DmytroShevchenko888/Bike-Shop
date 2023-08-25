@@ -1,0 +1,40 @@
+@use "../global" as *;
+
+.new-bicycles {
+  position: relative;
+  margin-top: 66px;
+
+  height: 100%;
+
+  background-color: $gray-4;
+
+  h2 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font: $title-d-h2;
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+  .new-bicycles {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: $breakpoint_xl) {
+  .new-bicycles {
+    margin-top: 48px;
+
+    background-color: $gray-4;
+
+    h2 {
+      padding-top: 40px;
+      padding-bottom: 32px;
+      font: $title-d-h2;
+    }
+  }
+}
+@media (max-width: $breakpoint_md) {
+}
+@media (max-width: $breakpoint_sm) {
+}

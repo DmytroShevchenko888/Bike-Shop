@@ -1,0 +1,61 @@
+@use "../global" as *;
+
+.ticker {
+  display: flex;
+  overflow: hidden;
+
+  &__logo-block {
+    display: flex;
+    align-items: center;
+
+    height: 206px;
+    width: 4746px;
+
+    margin-top: 80px;
+
+    animation: ticker 60s linear infinite;
+
+    img {
+      height: 75px;
+      margin: 39.5px 40px;
+    }
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-4746px);
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+}
+@media (max-width: $breakpoint_xl) {
+}
+@media (max-width: $breakpoint_md) {
+  .ticker {
+    &__logo-block {
+      height: 120px;
+      width: 2516.5px;
+      margin-top: 0px;
+      img {
+        height: 43.7px;
+        margin: 32.5px 12px;
+      }
+    }
+  }
+
+  @keyframes ticker {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-2516.5px);
+    }
+  }
+}
+@media (max-width: $breakpoint_sm) {
+}

@@ -1,0 +1,33 @@
+@use "../global" as *;
+
+.pagination {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    margin: 0px 10px;
+    column-gap: 12px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 46px;
+
+      border: 1px solid $gray-3;
+      border-radius: 10px;
+    }
+
+    .active {
+      background-color: $bt-orange-normal;
+      border-color: $bt-orange-normal;
+      a {
+        color: $white-1;
+      }
+    }
+  }
+}
