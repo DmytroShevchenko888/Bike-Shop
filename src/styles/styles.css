@@ -31,6 +31,16 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 1290px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+}
 *::-webkit-scrollbar {
   width: 10px;
   width: 10px;
@@ -77,6 +87,205 @@ body {
   background: #E1610C;
 }
 
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+}
+.navbar .container .content {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .container .content .nav-menu {
+  display: flex;
+  gap: 32px;
+  color: #FFFFFF;
+  font: 400 12px/19.2px "Inter", sans-serif;
+  text-transform: uppercase;
+}
+.navbar .container .content .nav-menu li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navbar .container .content .nav-menu li:hover {
+  color: #F57F2A;
+}
+.navbar .container .content .nav-menu li:first-child {
+  color: #F57F2A;
+}
+.navbar .container .content .user-menu {
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.navbar .container .content .user-menu div {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navbar .container .content .user-menu div:hover {
+  color: #F57F2A;
+}
+.navbar .container .content .user-menu .burger-menu {
+  margin-left: 58px;
+  color: #FFFFFF;
+}
+
+@media (max-width: 1290px) {
+  .navbar .container .content .nav-menu {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .navbar .container .content .user-menu .burger-menu {
+    margin-left: 15px;
+  }
+}
+.sidebar {
+  position: fixed;
+  right: -200%;
+  top: 0;
+  background: #FFFFFF;
+  width: 448px;
+  height: 100vh;
+  transition: all 0.5s ease;
+}
+.sidebar .container {
+  width: 100%;
+  position: relative;
+}
+.sidebar .container .content .bike-logo-black {
+  display: none;
+}
+.sidebar .container .content .close-btn {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.sidebar .container .content .subnav-menu {
+  display: none;
+}
+.sidebar .container .content .box-category {
+  display: none;
+}
+.sidebar .container .content .info-box {
+  margin-left: 40px;
+  margin-top: 104px;
+}
+.sidebar .container .content .info-box h3 {
+  text-transform: uppercase;
+  color: #000000;
+  font: 400 40px/49.2px "Bebas Neue", sans-serif;
+  margin-bottom: 24px;
+}
+.sidebar .container .content .info-box p {
+  margin-top: 24px;
+  color: #000000;
+  font: 500 18px/28.8px "Inter", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sidebar .container .content .info-box p:hover {
+  color: #F57F2A;
+}
+
+.active {
+  right: 0;
+}
+
+@media (max-width: 1290px) {
+  .sidebar .container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .sidebar .container .content .bike-logo-black {
+    display: block;
+    position: absolute;
+    top: 40px;
+    width: 64.05px;
+  }
+  .sidebar .container .content .bike-logo-black img {
+    width: 100%;
+  }
+  .sidebar .container .content .subnav-menu {
+    display: block;
+    margin-top: 116px;
+    width: 100%;
+  }
+  .sidebar .container .content .subnav-menu .trade-in-btn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background: #F8F8F8;
+    font: 500 18px/28.8px "Inter", sans-serif;
+    color: #F57F2A;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .sidebar .container .content .subnav-menu .dropdown-sidebar {
+    margin-bottom: 6px;
+  }
+  .sidebar .container .content .subnav-menu .dropdown-sidebar .box-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    background: #F8F8F8;
+    font: 500 18px/28.8px "Inter", sans-serif;
+    color: #000000;
+  }
+  .sidebar .container .content .subnav-menu .dropdown-sidebar .box-option .chevron-icon {
+    width: 18px;
+    height: 18px;
+    transition: all 0.3s;
+  }
+  .sidebar .container .content .subnav-menu .dropdown-sidebar .active-option {
+    background: #F57F2A;
+    color: #FFFFFF;
+  }
+  .sidebar .container .content .subnav-menu .dropdown-sidebar .active-option .chevron-icon {
+    transform: rotate(180deg);
+  }
+  .sidebar .container .content .subnav-menu .dropdown-sidebar .box-category {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font: 400 16px/25.6px "Inter", sans-serif;
+    color: #000000;
+    max-height: 0;
+    transition: 0.4s all;
+    overflow: hidden;
+  }
+  .sidebar .container .content .subnav-menu .dropdown-sidebar .active-category {
+    padding: 24px 16px;
+    max-height: 1200px;
+    transition: 0.4s;
+  }
+  .sidebar .container .content .info-box {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .sidebar .container .content .info-box h3 {
+    display: none;
+  }
+  .sidebar .container .content .info-box p {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .sidebar {
+    width: 100%;
+  }
+}
 .title {
   background-image: url(/src/images/home/main.jpg);
   background-position: 50%;
@@ -99,7 +308,7 @@ body {
   max-width: 50%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1290px) {
   .title .container {
     padding: 0 40px;
   }
@@ -110,6 +319,9 @@ body {
   }
   .title .container {
     padding: 0 20px;
+  }
+  .title .container .content .title-box {
+    padding-top: 343px;
   }
   .title .container .content .title-box h1 {
     font: 400 60px/73.8px "Bebas Neue", sans-serif;

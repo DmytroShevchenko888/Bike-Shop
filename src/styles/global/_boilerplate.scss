@@ -1,5 +1,6 @@
 @use "./colors" as *;
 @use "./typography" as *;
+@use "./screenSize" as *;
 
 * {
     box-sizing: border-box;
@@ -36,6 +37,19 @@ html {
     margin: 0 auto;
     //padding: 0 40px;
   }
+
+  @media (max-width: $breakpoint_xxl) {
+    .container{
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: $breakpoint_md) {
+    .container{
+      padding: 0 20px;
+    }
+  }
+
 
 *::-webkit-scrollbar {
     width: 10px;
