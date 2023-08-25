@@ -64,15 +64,15 @@ body {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: #8a0e0c;
+  background-color: #F57520;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #8a0e0c;
+  background-color: #F57520;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: #8a0e0c;
+  background-color: #F57520;
 }
 
 .standart-btn {
@@ -93,13 +93,16 @@ body {
 .navbar {
   position: absolute;
   width: 100%;
-  z-index: 50;
+  z-index: 20;
 }
 .navbar .container .content {
   padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.navbar .container .content .bike-logo {
+  cursor: pointer;
 }
 .navbar .container .content .nav-menu {
   display: flex;
@@ -155,6 +158,12 @@ body {
   width: 448px;
   height: 100vh;
   transition: all 0.5s ease;
+  z-index: 30;
+  overflow: scroll;
+  cursor: auto;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
 }
 .sidebar .container {
   width: 100%;
@@ -212,6 +221,7 @@ body {
     position: absolute;
     top: 40px;
     width: 64.05px;
+    cursor: pointer;
   }
   .sidebar .container .content .bike-logo-black img {
     width: 100%;
@@ -294,7 +304,7 @@ body {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 875px;
   width: 100%;
 }
 .title .container .content .title-box {
@@ -348,6 +358,7 @@ body {
   background-color: #101010;
   width: 37.5%;
   left: 0;
+  transition: 0.4s;
 }
 .submenu__wrapper:nth-child(1):hover {
   border-radius: 0px 10px 10px 0px;

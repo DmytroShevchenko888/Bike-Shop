@@ -15,6 +15,7 @@
       background-color: $black-1;
       width: 37.5%;
       left: 0;
+      transition: 0.4s;
       &:hover {
         border-radius: 0px 10px 10px 0px;
       }
