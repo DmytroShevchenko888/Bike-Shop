@@ -54,3 +54,55 @@ export const ROUTES = {
 export const sizeBicycles = ["XXS", "XS", "S", "M", "L", "XL", "XXL"];
 
 export const COUNT_PER_PAGE = 9;
+
+const arrFakeValue: string[] = [
+  "Part 1",
+  "Part 2",
+  "Part 3",
+  "Part 4",
+  "Part 5",
+  "Part 6",
+];
+
+export const listItemDropdown: {
+  title: string;
+  id: ActiveOType;
+  listOption: string[];
+}[] = [
+  {
+    title: "Bicycles",
+    id: "c1",
+    listOption: categoryBicycles,
+  },
+  {
+    title: "Parts",
+    id: "c2",
+    listOption: arrFakeValue,
+  },
+  {
+    title: "Equipment",
+    id: "c3",
+    listOption: arrFakeValue,
+  },
+  {
+    title: "Accessories",
+    id: "c4",
+    listOption: arrFakeValue,
+  },
+  {
+    title: "Bike Trainer",
+    id: "c5",
+    listOption: arrFakeValue,
+  },
+];
+
+export const listInfoBox = [
+  "About us",
+  "Workshop",
+  "Storage",
+  "Warranty",
+  "User Agreement",
+  "Delivery and Payment",
+  "Blog",
+  "Contacts",
+];
