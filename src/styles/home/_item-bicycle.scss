@@ -11,13 +11,16 @@
 .item-bicycle {
   position: relative;
 
-  height: 443px;
-
-  width: 400px;
   padding: 16px;
+
+  height: 443px;
+  min-width: 400px;
   border-radius: 10px;
 
-  z-index: 1;
+  user-select: none;
+  background-color: $bg-white;
+
+  z-index: 10;
   &:hover {
     background-color: $bg-white;
     box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
@@ -35,6 +38,7 @@
       justify-content: center;
       align-items: center;
       width: 368px;
+      z-index: 100;
 
       p {
         font: $text-d-btn;
@@ -71,7 +75,7 @@
 
   &__foto {
     padding-top: 10px;
-    width: 368px;
+    max-width: 368px;
   }
 
   &__fullName {
@@ -118,48 +122,27 @@
 
 @media (max-width: $breakpoint_xxl) {
 }
-@media (max-width: $breakpoint_xl) {
+
+@media (max-width: $breakpoint_md) {
   .item-bicycle {
-    height: 441px;
-    width: 290px;
-    padding: 8px;
+    padding: 16px;
 
-    &:hover {
-      height: 441px;
-
-      .item-bicycle__btn {
-        bottom: 8px;
-        width: 274px;
-
-        p {
-          font: $text-m-btn;
-        }
-      }
-    }
+    height: 529px;
 
     &__availability-true,
     &__availability-false {
       font: $text-m-pi1;
     }
 
-    &__foto {
-      width: 274px;
-    }
-
     &__fullName {
-      top: 257px;
-
       font: $title-m-hi5;
     }
 
     &__price {
-      top: 331px;
       font: $text-m-btn;
     }
 
     &__blockPrice {
-      top: 331px;
-
       &_sale {
         font: $text-m-btn;
       }
@@ -168,46 +151,52 @@
         font: $text-m-pi7;
       }
     }
-    .item-bicycle__btn,
-    .standart-btn {
-      display: block;
-    }
 
     .item-bicycle__btn {
       position: absolute;
-      bottom: 8px;
+      bottom: 16px;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 274px;
+      width: 368px;
+      z-index: 100;
 
       p {
-        font: $text-d-btn;
+        font: $text-m-btn;
         margin-left: 4px;
       }
     }
   }
 }
-@media (max-width: $breakpoint_md) {
-}
 @media (max-width: $breakpoint_sm) {
   .item-bicycle {
-    width: 100%;
-    padding: 8px;
+    min-width: 100%;
 
     &:hover {
+      background-color: $bg-white;
+      box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
+      height: 529px;
+
       .item-bicycle__btn {
-        width: calc(100% - 16px);
+        width: calc(100% - 32px);
+      }
+
+      .inactive {
+        background-color: $gray-3;
+        cursor: not-allowed;
       }
     }
 
     &__foto {
+      max-width: 100%;
+      max-height: 220px;
+
       position: absolute;
       top: 50px;
       left: 50%;
       transform: translateX(-50%);
 
-      padding: 0;
+      padding: 20px;
     }
 
     &__fullName {
@@ -217,12 +206,7 @@
     }
 
     .item-bicycle__btn {
-      width: calc(100% - 16px);
-
-      p {
-        font: $text-d-btn;
-        margin-left: 4px;
-      }
+      width: calc(100% - 32px);
     }
   }
 }

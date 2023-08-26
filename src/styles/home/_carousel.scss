@@ -1,0 +1,64 @@
+@use "../global" as *;
+
+.carousel {
+  height: 529px;
+  width: 1280px;
+
+  // background-color: red;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &__window {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__all-pages-container {
+    height: 100%;
+
+    display: flex;
+    column-gap: 40px;
+
+    transition: all 2s ease;
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    z-index: 10;
+
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+  }
+
+  &__arrow-left {
+    left: 0;
+  }
+  &__arrow-right {
+    right: 0;
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+  .carousel {
+    width: 840px;
+  }
+}
+@media (max-width: $breakpoint_xl) {
+  .carousel {
+    width: 400px;
+  }
+}
+@media (max-width: $breakpoint_md) {
+}
+@media (max-width: $breakpoint_sm) {
+  .carousel {
+    width: 100%;
+  }
+}

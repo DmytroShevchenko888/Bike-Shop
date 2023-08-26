@@ -2,12 +2,13 @@ import ContentLoader from "react-content-loader";
 import { useMediaQuery } from "../../../hooks/useMediaQuery";
 
 const SkeketonItemBicycle = (props: any) => {
-  const breakpoint_xl = useMediaQuery("(max-width: 1024px)");
-  const widthAdaptive = breakpoint_xl ? 290 : 400;
-  const heightAdaptive = breakpoint_xl ? 441 : 443;
+  const breakpoint_md = useMediaQuery("(max-width: 1024px)");
+  const widthAdaptive = 400;
+  const heightAdaptive = breakpoint_md ? 529 : 443;
 
   return (
     <ContentLoader
+      style={{ margin: "auto" }}
       speed={1}
       width={widthAdaptive}
       height={heightAdaptive}

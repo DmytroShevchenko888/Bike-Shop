@@ -19,6 +19,7 @@ const ItemDropdown: React.FC<ItemDropdownProps> = ({
   getCategory,
 }) => {
   return (
+    // create new className="item-dropdown" and move styles "_item-dropdown.scss"
     <div className="dropdown-sidebar">
       <div
         id={id}

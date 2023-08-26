@@ -7,6 +7,12 @@
 .items-bicycle {
   position: relative;
   width: 100%;
+  padding-bottom: 52px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+
+  // background-color: yellow;
 
   &__block {
     height: 100%;
@@ -36,17 +42,14 @@
   }
 
   &__btn {
-    width: 100%;
-    margin-top: 48px;
-    position: relative;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    // bottom: 40px;
-    // left: 50%;
-    // transform: translateX(-50%);
+    position: absolute;
+
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
 
     font: $text-d-pi3;
+    z-index: 0;
   }
   &__btn.white-text {
     color: $white-1;
@@ -76,6 +79,7 @@
 }
 @media (max-width: $breakpoint_md) {
   .items-bicycle {
+    padding-bottom: 132px;
     &__block {
       justify-content: center;
     }
