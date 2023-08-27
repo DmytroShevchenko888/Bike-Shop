@@ -38,7 +38,7 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
   const { isLoaded } = useAppSelector((state) => state.bicycles.bicycles);
 
   React.useEffect(() => {
-    dispatch(fetchAllBicycles({}));
+    dispatch(fetchAllBicycles());
 
     setFinishArray(showAmountBicycles);
   }, [dispatch, showAmountBicycles, page]);

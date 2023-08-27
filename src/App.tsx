@@ -11,7 +11,7 @@ interface AppProps {}
 const App: React.FC<AppProps> = () => {
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <Routes>
         <Route path={ROUTES.HOME} element={<Home />} />
       </Routes>

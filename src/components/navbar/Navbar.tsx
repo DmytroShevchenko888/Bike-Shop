@@ -10,7 +10,6 @@ import { getImageUrl } from "../../helpers/getImageUrl";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../constants";
-ROUTES;
 
 interface NavbarProps {}
 
@@ -23,13 +22,13 @@ const Navbar: React.FC<NavbarProps> = () => {
 
   return (
     <header className="navbar">
-      <Link to={ROUTES.HOME}>
-        <Sidebar openNav={openNav} closeNav={closeNav} />
-      </Link>
+      <Sidebar openNav={openNav} closeNav={closeNav} />
       <div className="container">
         <div className="content">
           <div className="bike-logo">
-            <img src={getImageUrl("home", "bikelogo.svg")} alt="logo" />
+            <Link to={ROUTES.HOME}>
+              <img src={getImageUrl("home", "bikelogo.svg")} alt="logo" />
+            </Link>
           </div>
           <ul className="nav-menu">
             <li>Trade in</li>
