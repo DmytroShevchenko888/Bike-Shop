@@ -1,3 +1,5 @@
+import { getImageUrl } from "./helpers/getImageUrl";
+
 export const brandBicycles = [
   "Bergamont",
   "Bianchi",
@@ -105,4 +107,31 @@ export const listInfoBox = [
   "Delivery and Payment",
   "Blog",
   "Contacts",
+];
+
+export const mountainBicyclesSection = [
+  {
+    title: "Frame",
+    subtitle:
+      "It is a long established fact that a reader will be distracted by the readable content of",
+    icon: getImageUrl("home", "icon-frame.svg"),
+  },
+  {
+    title: "On-board computer",
+    subtitle:
+      "The point of using lorem ipsum is that it has a more-or-less normal distribution of letters",
+    icon: getImageUrl("home", "icon-computer.svg"),
+  },
+  {
+    title: "Transmission",
+    subtitle:
+      "Many desktop publishing packages and web page editors now use lorem ipsum as",
+    icon: getImageUrl("home", "icon-transmission.svg"),
+  },
+  {
+    title: "Equipment",
+    subtitle:
+      "Contrary to popular belief, lorem ipsum is not simply random text. It has roots in",
+    icon: getImageUrl("home", "icon-equipment.svg"),
+  },
 ];

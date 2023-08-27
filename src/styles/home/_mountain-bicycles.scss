@@ -1,0 +1,200 @@
+@use "../global" as *;
+
+.mountain-bicycles {
+  height: 907px;
+  width: 100%;
+
+  background-color: $gray-4;
+  .container {
+    h2 {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      font: $title-d-h2;
+    }
+
+    .mountain-bicycles__main {
+      display: flex;
+      justify-content: space-between;
+
+      .mountain-bicycles__main-col1 {
+        width: 620px;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .mountain-bicycles__item {
+          position: relative;
+          padding: 60px 36px 32px 24px;
+
+          width: 302px;
+          height: 233px;
+          border-radius: 10px;
+          background-color: $black-3;
+
+          img {
+            position: absolute;
+            top: 40px;
+            right: 30px;
+          }
+
+          h4 {
+            font: $title-d-hi3;
+            color: $white-1;
+          }
+
+          p {
+            padding-top: 40px;
+            font: $text-d-pi1;
+            color: $white-1;
+          }
+        }
+      }
+
+      .mountain-bicycles__main-col2 {
+        width: 510px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img {
+          border-radius: 10px;
+        }
+        p {
+          font: $text-d-pi2;
+          color: $black-1;
+        }
+
+        .mountain-bicycles__btn {
+          font: $text-d-btn;
+          color: $white-1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+  .mountain-bicycles {
+    height: 100%;
+    padding-bottom: 40px;
+    .container {
+      .mountain-bicycles__main {
+        flex-direction: column;
+        align-items: center;
+
+        .mountain-bicycles__main-col2 {
+          margin-top: 80px;
+          width: 620px;
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  .mountain-bicycles {
+    .container {
+      h2 {
+      }
+
+      .mountain-bicycles__main {
+        .mountain-bicycles__main-col1 {
+          padding: 0px 20px;
+          width: 100vw;
+          flex-wrap: nowrap;
+          overflow: scroll;
+
+          // __________hidden scroll
+          -ms-overflow-style: none;
+          &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+          }
+
+          .mountain-bicycles__item {
+            // position: relative;
+            // padding: 60px 36px 32px 24px;
+
+            min-width: 302px;
+            height: 233px;
+            // border-radius: 10px;
+            // background-color: $black-3;
+
+            // img {
+            //   position: absolute;
+            //   top: 40px;
+            //   right: 30px;
+            // }
+
+            // h4 {
+            //   font: $title-d-hi3;
+            //   color: $white-1;
+            // }
+
+            // p {
+            //   padding-top: 40px;
+            //   font: $text-d-pi1;
+            //   color: $white-1;
+            // }
+          }
+        }
+
+        .mountain-bicycles__main-col2 {
+          margin-top: 32px;
+          width: 100vw;
+
+          img {
+            max-width: 100vw;
+          }
+          p {
+            margin: 0 20px;
+          }
+
+          .mountain-bicycles__btn {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_sm) {
+  .mountain-bicycles {
+    .container {
+      h2 {
+        font: $title-m-h2;
+        padding-top: 40px;
+        padding-bottom: 32px;
+      }
+
+      .mountain-bicycles__main {
+        .mountain-bicycles__main-col1 {
+          .mountain-bicycles__item {
+            h4 {
+              font: $title-m-hi3;
+            }
+
+            p {
+              font: $text-m-pi1;
+            }
+          }
+        }
+
+        .mountain-bicycles__main-col2 {
+          height: 430px;
+
+          p {
+            font: $text-m-pi2;
+          }
+
+          .mountain-bicycles__btn {
+            font: $text-m-btn;
+          }
+        }
+      }
+    }
+  }
+}
