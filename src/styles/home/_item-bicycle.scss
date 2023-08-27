@@ -25,6 +25,7 @@
     background-color: $bg-white;
     box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
     height: 529px;
+    z-index: 200;
 
     .item-bicycle__btn,
     .standart-btn {

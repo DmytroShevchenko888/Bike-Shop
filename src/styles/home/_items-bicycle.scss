@@ -5,51 +5,42 @@
 }
 
 .items-bicycle {
-  position: relative;
+  // position: relative;
   width: 100%;
-  padding-bottom: 52px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; //___________?
   z-index: 10;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   // background-color: yellow;
 
   &__block {
+    // background-color: red;
     height: 100%;
+    width: 100%;
 
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(3, 443px);
     column-gap: 40px;
-    row-gap: 10px;
-  }
-
-  &__left-arrow,
-  &__right-arrow {
-    z-index: 2;
-    position: absolute;
-    top: 226px;
-
-    cursor: pointer;
-  }
-
-  &__left-arrow {
-    left: 0;
-  }
-
-  &__right-arrow {
-    right: 0;
+    row-gap: 16px;
   }
 
   &__btn {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin: 48px 0px 80px 0px;
 
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+    // position: absolute;
+
+    // bottom: 20px;
+    // left: 50%;
+    // transform: translateX(-50%);
 
     font: $text-d-pi3;
-    z-index: 0;
   }
   &__btn.white-text {
     color: $white-1;
@@ -59,31 +50,31 @@
 @media (max-width: $breakpoint_xxl) {
   .items-bicycle {
     &__block {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      column-gap: 40px;
+      grid-template-columns: repeat(2, 400px);
+      grid-template-rows: repeat(5, 443px);
     }
   }
 }
 @media (max-width: $breakpoint_xl) {
   .items-bicycle {
-    &__left-arrow,
-    &__right-arrow {
-      position: absolute;
-      top: 226px;
-
-      cursor: pointer;
+    &__block {
+      grid-template-columns: repeat(1, 400px);
+      grid-template-rows: repeat(9, 443px);
     }
   }
 }
 @media (max-width: $breakpoint_md) {
   .items-bicycle {
-    padding-bottom: 132px;
+    // padding-bottom: 132px;
     &__block {
-      justify-content: center;
+      grid-template-rows: repeat(9, 529px);
     }
   }
 }
 @media (max-width: $breakpoint_sm) {
+  .items-bicycle {
+    &__block {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }

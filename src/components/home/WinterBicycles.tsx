@@ -44,7 +44,8 @@ const WinterBicycles: React.FC<WinterBicyclesProps> = () => {
 
         <ItemsBicycle
           btnWhite
-          bicycles={currentBicyclesPage(listNoveltyBicycles)}
+          bicyclesOnCurrentPage={currentBicyclesPage(listNoveltyBicycles)}
+          bicycles={listNoveltyBicycles}
           showMore={showMore}
           setShowMore={setShowMore}
           page={page}

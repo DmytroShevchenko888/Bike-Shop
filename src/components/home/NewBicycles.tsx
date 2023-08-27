@@ -28,7 +28,8 @@ const NewBicycles: React.FC<NewBicyclesProps> = () => {
         <h2>Novelties</h2>
 
         <ItemsBicycle
-          bicycles={currentBicyclesPage(allbicycles)} // bicycles={currentBicyclesPage(listNoveltyBicycles)}
+          bicycles={allbicycles} // bicycles={listNoveltyBicycles}
+          bicyclesOnCurrentPage={currentBicyclesPage(allbicycles)} // bicycles={currentBicyclesPage(listNoveltyBicycles)}
           showMore={showMore}
           setShowMore={setShowMore}
           page={page}

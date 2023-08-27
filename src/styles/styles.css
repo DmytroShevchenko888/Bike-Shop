@@ -527,6 +527,7 @@ body {
   background-color: #FFFFFF;
   box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
   height: 529px;
+  z-index: 200;
 }
 .item-bicycle:hover .item-bicycle__btn,
 .item-bicycle:hover .standart-btn {
@@ -674,41 +675,30 @@ body {
 }
 
 .items-bicycle {
-  position: relative;
   width: 100%;
-  padding-bottom: 52px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   z-index: 10;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .items-bicycle__block {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: repeat(3, 443px);
   -moz-column-gap: 40px;
        column-gap: 40px;
-  row-gap: 10px;
-}
-.items-bicycle__left-arrow, .items-bicycle__right-arrow {
-  z-index: 2;
-  position: absolute;
-  top: 226px;
-  cursor: pointer;
-}
-.items-bicycle__left-arrow {
-  left: 0;
-}
-.items-bicycle__right-arrow {
-  right: 0;
+  row-gap: 16px;
 }
 .items-bicycle__btn {
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  margin: 48px 0px 80px 0px;
   font: 400 12px/19.2px "Inter", sans-serif;
-  z-index: 0;
 }
 .items-bicycle__btn.white-text {
   color: #FFFFFF;
@@ -716,26 +706,24 @@ body {
 
 @media (max-width: 1290px) {
   .items-bicycle__block {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(5, 443px);
   }
 }
 @media (max-width: 1024px) {
-  .items-bicycle__left-arrow, .items-bicycle__right-arrow {
-    position: absolute;
-    top: 226px;
-    cursor: pointer;
+  .items-bicycle__block {
+    grid-template-columns: repeat(1, 400px);
+    grid-template-rows: repeat(9, 443px);
   }
 }
 @media (max-width: 767px) {
-  .items-bicycle {
-    padding-bottom: 132px;
-  }
   .items-bicycle__block {
-    justify-content: center;
+    grid-template-rows: repeat(9, 529px);
+  }
+}
+@media (max-width: 576px) {
+  .items-bicycle__block {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .new-bicycles {
@@ -793,7 +781,7 @@ body {
   }
 }
 .pagination {
-  margin-top: 50px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
