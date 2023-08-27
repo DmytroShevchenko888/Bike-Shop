@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useAppDispatch, useAppSelector } from "../../redux/hook";
+import { useAppDispatch } from "../../redux/hook";
 import { fetchAllBicycles } from "../../redux/thunks";
 
 import ItemBicycle from "./ItemBicycle";
@@ -23,8 +23,6 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
   setShowMore,
   page,
 }) => {
-  console.log("bicycles:", bicyclesOnCurrentPage);
-
   const dispatch = useAppDispatch();
 
   React.useEffect(() => {
@@ -59,14 +57,6 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
       />
     ));
 
-  // const showBtn = amountBicycles >= 3 && !showMore && (
-  //   <button
-  //     onClick={() => setShowMore(true)}
-  //     className={`items-bicycle__btn ${btnWhite ? "white-text" : ""}`}
-  //   >
-  //     SHOW ALL
-  //   </button>
-  // );
   const showBtn = amountBicycles >= 3 && (
     <button
       onClick={() => setShowMore(!showMore)}

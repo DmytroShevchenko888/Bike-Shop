@@ -13,7 +13,7 @@ const NewBicycles: React.FC<NewBicyclesProps> = () => {
   const [showMore, setShowMore] = React.useState<boolean>(false);
 
   const { allbicycles } = useAppSelector((state) => state.bicycles.bicycles);
-  const listNoveltyBicycles = allbicycles.filter((bicycle) => bicycle.novelty);
+  // const listNoveltyBicycles = allbicycles.filter((bicycle) => bicycle.novelty);
 
   const lastBicyclesIndex = page * COUNT_PER_PAGE;
   const firstBicyclesIndex = lastBicyclesIndex - COUNT_PER_PAGE;
