@@ -1,0 +1,56 @@
+@use "../global" as *;
+
+.contacts {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+  &__item {
+    display: flex;
+    & img {
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+    }
+    &-text {
+      font: $text-d-pi2;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+  .contacts {
+    row-gap: 32px;
+    &__item {
+      width: 50%;
+
+      &:nth-child(2n) {
+        justify-content: flex-end;
+        & .contacts__item-text {
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint_md) {
+  .contacts {
+    margin-top: 24px;
+    &__item {
+      width: 100%;
+
+      &-text {
+        font: $text-m-pi2;
+      }
+
+      &:nth-child(2n) {
+        justify-content: start;
+        & .contacts__item-text {
+          width: unset;
+        }
+      }
+    }
+  }
+}

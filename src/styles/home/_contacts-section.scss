@@ -1,0 +1,27 @@
+@use "../global" as *;
+
+.contacts-section {
+  height: 100%;
+
+  .container {
+    h2 {
+      padding-bottom: 80px;
+      font: $title-d-h2;
+    }
+
+    .contacts-section__map {
+      width: 100vw;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  .contacts-section {
+    .container {
+      h2 {
+        padding-bottom: 24px;
+        font: $title-m-h2;
+      }
+    }
+  }
+}

@@ -135,3 +135,8 @@ export const mountainBicyclesSection = [
     icon: getImageUrl("home", "icon-equipment.svg"),
   },
 ];
+
+export const coordinatesMapsDnipro: CoordinatesType = {
+  lat: 48.4708749,
+  lng: 35.0353394,
+};

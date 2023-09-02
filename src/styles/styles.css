@@ -985,4 +985,71 @@ body {
   .mountain-bicycles .container .mountain-bicycles__main .mountain-bicycles__main-col2 .mountain-bicycles__btn {
     font: 500 16px/19.68px "Inter", sans-serif;
   }
+}
+.contacts-section {
+  height: 100%;
+}
+.contacts-section .container h2 {
+  padding-bottom: 80px;
+  font: 400 64px/78.72px "Bebas Neue", sans-serif;
+}
+.contacts-section .container .contacts-section__map {
+  width: 100vw;
+}
+
+@media (max-width: 767px) {
+  .contacts-section .container h2 {
+    padding-bottom: 24px;
+    font: 400 50px/52.5px "Bebas Neue", sans-serif;
+  }
+}
+.contacts {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contacts__item {
+  display: flex;
+}
+.contacts__item img {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+.contacts__item-text {
+  font: 300 16px/25.6px "Inter", sans-serif;
+}
+
+@media (max-width: 1290px) {
+  .contacts {
+    row-gap: 32px;
+  }
+  .contacts__item {
+    width: 50%;
+  }
+  .contacts__item:nth-child(2n) {
+    justify-content: flex-end;
+  }
+  .contacts__item:nth-child(2n) .contacts__item-text {
+    width: 160px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts {
+    margin-top: 24px;
+  }
+  .contacts__item {
+    width: 100%;
+  }
+  .contacts__item-text {
+    font: 300 16px/25.6px "Inter", sans-serif;
+  }
+  .contacts__item:nth-child(2n) {
+    justify-content: start;
+  }
+  .contacts__item:nth-child(2n) .contacts__item-text {
+    width: unset;
+  }
 }/*# sourceMappingURL=styles.css.map */
