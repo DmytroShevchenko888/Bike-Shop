@@ -1,8 +1,3 @@
-type ImageType = {
-  color: string;
-  image: string;
-};
-
 type BicycleType = {
   _id?: string;
   fullName: string;
@@ -10,7 +5,7 @@ type BicycleType = {
   novelty: boolean;
   manufacturer: string;
   article: string;
-  image: ImageTypes[];
+  image: string;
   availability: boolean;
   price: number;
   priceSale: number;
