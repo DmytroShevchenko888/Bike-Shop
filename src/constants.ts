@@ -16,6 +16,7 @@ export const brandBicycles = [
   "Scott",
   "Orbea",
   "Tifosi",
+  "United",
   //... can add yet
 ];
 
