@@ -23,7 +23,7 @@ const Pagination: React.FC<PaginationProps> = ({
   const dispatch = useAppDispatch();
 
   const showCurrentPage = async (page: number) => {
-    await dispatch(fetchAllBicycles({}));
+    await dispatch(fetchAllBicycles());
     setPage(page);
   };
 
