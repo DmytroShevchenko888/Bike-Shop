@@ -299,6 +299,162 @@ body {
     width: 100%;
   }
 }
+footer .mail-section {
+  background: #101010;
+}
+footer .mail-section .container {
+  background-image: url(/src/images/footer/footer.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: right;
+}
+footer .mail-section .container .content {
+  padding: 40px 0;
+}
+footer .mail-section .container .content h2 {
+  font: 400 64px/78.72px "Bebas Neue", sans-serif;
+  color: #FFFFFF;
+  padding-bottom: 32px;
+}
+footer .mail-section .container .content .mail-section__content {
+  margin-bottom: 14px;
+}
+footer .mail-section .container .content .mail-section__content input {
+  width: 346px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: 0 none;
+  font: 400 16px/25.6px "Inter", sans-serif;
+  margin-right: 16px;
+}
+footer .mail-section .container .content .mail-section__content input:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+footer .mail-section .container .content .mail-section__content input:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+footer .mail-section .container .content .mail-section__content .standart-btn {
+  width: 180px;
+  height: 46px;
+  border-radius: 5px;
+}
+footer .mail-section .container .content .agreement-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+footer .mail-section .container .content .agreement-box .checkbox {
+  width: 24px;
+  height: 24px;
+  accent-color: #F57520;
+}
+footer .mail-section .container .content .agreement-box label {
+  color: #FFFFFF;
+  font: 400 12px/19.2px "Inter", sans-serif;
+}
+footer .footer-section {
+  background: #131313;
+  padding-top: 91px;
+}
+footer .footer-section .container .content .footer-section__content {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+footer .footer-section .container .content .footer-section__content .content-logo .logo {
+  margin-bottom: 64px;
+}
+footer .footer-section .container .content .footer-section__content .content-logo p {
+  font: 300 16px/25.6px "Inter", sans-serif;
+  color: #B3B3B3;
+  width: 289px;
+}
+footer .footer-section .container .content .footer-section__content .content-grid {
+  padding-top: 11px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+footer .footer-section .container .content .footer-section__content .content-grid .content-1 h3, footer .footer-section .container .content .footer-section__content .content-grid .content-2 h3, footer .footer-section .container .content .footer-section__content .content-grid .content-3 h3 {
+  color: #FFFFFF;
+  font: 500 24px/38.4px "Inter", sans-serif;
+  margin-bottom: 16px;
+}
+footer .footer-section .container .content .footer-section__content .content-grid .content-1 p, footer .footer-section .container .content .footer-section__content .content-grid .content-2 p, footer .footer-section .container .content .footer-section__content .content-grid .content-3 p {
+  margin-top: 16px;
+  color: #FFFFFF;
+  font: 300 16px/25.6px "Inter", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+footer .footer-section .container .content .footer-section__content .content-grid .content-1 p:hover, footer .footer-section .container .content .footer-section__content .content-grid .content-2 p:hover, footer .footer-section .container .content .footer-section__content .content-grid .content-3 p:hover {
+  color: #F57F2A;
+}
+footer .footer-section .container .content .footer-section__content .content-grid .content-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .footer-section .container .content .footer-section__content .content-grid .content-3 p {
+  margin-top: 0;
+}
+footer .footer-section .container .content .footer-section__content .content-grid .content-3 .item-1, footer .footer-section .container .content .footer-section__content .content-grid .content-3 .item-2, footer .footer-section .container .content .footer-section__content .content-grid .content-3 .item-3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer-section .container .content .agreement {
+  border-top: 1px solid #34312D;
+  display: flex;
+  gap: 24px;
+  padding: 16px 0 23px 0;
+}
+footer .footer-section .container .content .agreement p {
+  font: 400 12px/19.2px "Inter", sans-serif;
+  color: #777777;
+}
+
+@media (max-width: 1290px) {
+  footer .footer-section .container .content .footer-section__content {
+    justify-content: space-between;
+  }
+  footer .footer-section .container .content .footer-section__content .content-grid {
+    display: block;
+  }
+  footer .footer-section .container .content .footer-section__content .content-grid .content-1, footer .footer-section .container .content .footer-section__content .content-grid .content-2 {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  footer .mail-section .container {
+    background-image: none;
+  }
+  footer .mail-section .container .content h2 {
+    font: 400 50px/52.5px "Bebas Neue", sans-serif;
+  }
+  footer .mail-section .container .content .mail-section__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  footer .mail-section .container .content .mail-section__content input {
+    width: 100%;
+  }
+  footer .mail-section .container .content .mail-section__content .standart-btn {
+    width: 100%;
+  }
+  footer .footer-section {
+    padding-top: 40px;
+  }
+  footer .footer-section .container .content .footer-section__content {
+    flex-direction: column;
+  }
+  footer .footer-section .container .content .footer-section__content .content-logo .logo {
+    margin-bottom: 31px;
+  }
+}
 .title {
   background-image: url(/src/images/home/main.jpg);
   background-position: 50%;
@@ -1006,7 +1162,8 @@ body {
 }
 .contacts {
   width: 100%;
-  margin-top: 40px;
+  padding-top: 44px;
+  padding-bottom: 192px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1039,7 +1196,8 @@ body {
 }
 @media (max-width: 767px) {
   .contacts {
-    margin-top: 24px;
+    padding-top: 24px;
+    padding-bottom: 48px;
   }
   .contacts__item {
     width: 100%;

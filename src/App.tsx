@@ -5,6 +5,7 @@ import "./styles/styles.css";
 import { ROUTES } from "./constants";
 import Home from "./pages/Home.tsx";
 import Navbar from "./components/navbar/Navbar.tsx";
+import Footer from "./components/footer/Footer.tsx";
 
 interface AppProps {}
 
@@ -15,6 +16,7 @@ const App: React.FC<AppProps> = () => {
       <Routes>
         <Route path={ROUTES.HOME} element={<Home />} />
       </Routes>
+      <Footer />
     </>
   );
 };
