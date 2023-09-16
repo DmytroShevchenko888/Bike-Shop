@@ -1,0 +1,19 @@
+@use "../global" as *;
+
+$height_header: 105px;
+
+.add-bicycle {
+  width: 100%;
+  height: $height_header;
+  background-color: $bt-black;
+
+  .container {
+    .add-bicycle__title {
+      padding-top: calc($height_header + 80px);
+      padding-bottom: 48px;
+
+      font: $title-d-h3;
+      color: $black-1;
+    }
+  }
+}
