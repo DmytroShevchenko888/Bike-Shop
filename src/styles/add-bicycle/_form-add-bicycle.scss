@@ -27,6 +27,13 @@
         cursor: pointer;
       }
     }
+
+    @media (max-width: $breakpoint_sm) {
+      width: 100%;
+      ul {
+        justify-content: space-between;
+      }
+    }
   }
 
   .select-multiple-options {
@@ -76,6 +83,16 @@
         background-color: $bt-orange-normal;
       }
     }
+
+    @media (max-width: $breakpoint_sm) {
+      width: 100%;
+      ul {
+        justify-content: center;
+        li {
+          width: 100%;
+        }
+      }
+    }
   }
 
   .form-add-bicycle__switch-button {
@@ -93,13 +110,21 @@
 
       .switch-btn__toggle {
         position: absolute;
-        top: 1px;
+        top: 2px;
         right: 2px;
         height: 20px;
         width: 20px;
         border-radius: 100%;
 
         transition: all 0.2s ease;
+      }
+    }
+
+    @media (max-width: $breakpoint_md) {
+      width: 100%;
+      justify-content: space-between;
+      .switch-btn {
+        margin-left: 0px;
       }
     }
   }
@@ -121,7 +146,7 @@
       margin-top: 8px;
 
       height: 58px;
-      width: 1060px;
+      max-width: 1060px;
 
       .form-add-bicycle__input-string {
         width: 100%;
@@ -176,11 +201,18 @@
 
       background: url("/src/images/addBicycle/drop-down-arrow.svg") 96% / 10%
         no-repeat #eee;
+
+      @media (max-width: $breakpoint_md) {
+        width: 100%;
+
+        background: url("/src/images/addBicycle/drop-down-arrow.svg") 96% / 5%
+          no-repeat #eee;
+      }
     }
     .textarea-relative {
       margin-top: 8px;
       position: relative;
-      width: 724px;
+      max-width: 724px;
       height: 100%;
       textarea {
         padding: 16px 60px 16px 16px;

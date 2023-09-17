@@ -170,6 +170,7 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
         label="Full name*"
         typeInput="text"
         placeholder="For example, Specialized Turbo Levo Comp Alloy 2022 - Electric Mountain Bike"
+        widthInput="1050px"
       />
 
       <InputCheckbox
@@ -199,6 +200,7 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
         the photos on the server. The first line string before the comma is the
         title photo"
         placeholder="Specialized-Turbo-Levo-Comp-Alloy-2022-Electric-Mountain-Bike-black.jpg,Specialized-Turbo-Levo-Comp-Alloy-2022-Electric-Mountain-Bike-blue.jpg..."
+        heigthTextarea="200px"
       />
       <InputTextarea
         register={register}
@@ -236,6 +238,7 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
         label="Article*"
         typeInput="text"
         placeholder="For example, 245838"
+        widthInput="220px"
       />
 
       <InputString
@@ -248,6 +251,7 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
         label="Price*"
         typeInput="number"
         placeholder="For example, 3499"
+        widthInput="220px"
       />
 
       <InputString
@@ -258,6 +262,7 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
         label="Price sale"
         typeInput="number"
         placeholder="For example, 3000"
+        widthInput="220px"
       />
 
       <div className="form-add-bicycle__select-multiple-options">
@@ -326,6 +331,7 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
           label="Year*"
           typeInput="number"
           placeholder="For example, 2023"
+          widthInput="220px"
         />
 
         <InputString
@@ -338,8 +344,9 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
           valueMin={1}
           valueMax={33}
           label="Diameter tires*"
-          typeInput="number"
+          typeInput="string"
           placeholder="For example, 28"
+          widthInput="220px"
         />
 
         <InputString
@@ -369,6 +376,8 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
           valueMinLength={40}
           label="Frame*"
           placeholder="For example, Specialized m5 premium alloy, headset adjust, bb height adjust, s-sizing, internal cable routing, 150mm travel, 148mm spacing..."
+          widthTextarea="750px"
+          heigthTextarea="150px"
         />
 
         <InputString
@@ -386,6 +395,8 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
           optionalField
           label="Seatpost"
           placeholder="For example, X-fusion manic, infinite adjustable, two-bolt head, bottom mount cable routing, remote slr le lever, 34.9, s1: 100mm, s2: 125mm, s3: 150mm, s4/s5: 175mm, s6: 190mm"
+          widthTextarea="750px"
+          heigthTextarea="150px"
         />
         <InputTextarea
           register={register}
@@ -393,6 +404,8 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
           optionalField
           label="Fork"
           placeholder="For example, Gt pro design, 100% cr-mo 2pc. steerer, tapered legs, 3/8 axle dropouts"
+          widthTextarea="750px"
+          heigthTextarea="350px"
         />
 
         <InputString

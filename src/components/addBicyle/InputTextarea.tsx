@@ -19,6 +19,8 @@ interface InputTextareaProps {
   label: string; // title text componenta
 
   placeholder: string; // <input placeholder="?"/>
+  widthTextarea?: string; // max-width: '724px'; textarea
+  heigthTextarea?: string; // max-heigth: '375px'; textarea
 }
 
 export const InputTextarea: React.FC<InputTextareaProps> = ({
@@ -32,13 +34,16 @@ export const InputTextarea: React.FC<InputTextareaProps> = ({
   label,
 
   placeholder,
+  widthTextarea,
+  heigthTextarea,
 }) => {
   return (
     <div className="form-add-bicycle__input-block">
       <label className="form-add-bicycle__input-title">{label}</label>
-      <div className="textarea-relative">
+      <div className="textarea-relative" style={{ maxWidth: widthTextarea }}>
         <textarea
           className={errors?.[registerKey] ? "textarea-relative__error" : ""}
+          style={{ height: heigthTextarea }}
           {...register(
             registerKey,
             optionalField

@@ -19,6 +19,7 @@ interface InputStringProps {
   label: string; // title text componenta
   typeInput: string; // <input type="?"/>
   placeholder: string; // <input placeholder="?"/>
+  widthInput?: string; // max-width: '1050px;
 }
 
 export const InputString: React.FC<InputStringProps> = ({
@@ -36,11 +37,12 @@ export const InputString: React.FC<InputStringProps> = ({
   label,
   typeInput,
   placeholder,
+  widthInput,
 }) => {
   return (
     <div className="form-add-bicycle__input-block">
       <label className="form-add-bicycle__input-title">{label}</label>
-      <div className="input-relative">
+      <div className="input-relative" style={{ maxWidth: widthInput }}>
         <input
           type={typeInput}
           {...register(
