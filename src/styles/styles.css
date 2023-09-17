@@ -1214,11 +1214,13 @@ footer .footer-section .container .content .agreement p {
 }
 .add-bicycle {
   width: 100%;
+}
+.add-bicycle .add-bicycle__header {
   height: 105px;
   background-color: #101010;
 }
 .add-bicycle .container .add-bicycle__title {
-  padding-top: 185px;
+  padding-top: 80px;
   padding-bottom: 48px;
   font: 400 40px/49.2px "Bebas Neue", sans-serif;
   color: #101010;
