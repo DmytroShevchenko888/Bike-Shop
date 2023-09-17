@@ -3,7 +3,7 @@ import { getImageUrl } from "../../../helpers/getImageUrl";
 
 interface ItemBicycleProps {
   availability: boolean;
-  image: ImageType[];
+  image: string;
   fullName: string;
   price: number;
   priceSale: number;
@@ -19,6 +19,8 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
   backgroundWhite,
 }) => {
   const showFullName50chars = fullName.slice(0, 50) + "...";
+  const arrImages = image.split(",");
+  const titleImage = arrImages[0].trim();
 
   return (
     <div className={`item-bicycle ${backgroundWhite ? "bg-white" : ""}`}>
@@ -32,7 +34,11 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
       ) : (
         <span className="item-bicycle__availability-false">sold out</span>
       )}
-      <img className="item-bicycle__foto" src={image[0].image} alt="foto" />
+      <img
+        className="item-bicycle__foto"
+        src={`https://velo-shop-api.vercel.app/uploads/${titleImage}`}
+        alt="foto"
+      />
       <p className="item-bicycle__fullName">{showFullName50chars}</p>
       {price === priceSale ? (
         <p className="item-bicycle__price">{price} $</p>
