@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice, AnyAction } from "@reduxjs/toolkit";
 
-import { fetchAllBicycles, fetchOneBicycle } from "../thunks";
+import { fetchAllBicycles, fetchOneBicycle, fetchPostBicycle } from "../thunks";
 
 type TypeInitialState = {
   bicycles: {
@@ -47,6 +47,7 @@ const bicyclesSlice = createSlice({
         state.bicycles.allbicycles = action.payload;
 
         state.bicycles.isLoaded = true;
+        state.bicycles.error = null;
       })
 
       .addCase(fetchOneBicycle.pending, (state) => {
@@ -57,11 +58,28 @@ const bicyclesSlice = createSlice({
         //@ts-ignore
         state.bicycle.currentbicycle = action.payload;
         state.bicycle.isLoaded = true;
+        state.bicycle.error = null;
+      })
+
+      .addCase(fetchPostBicycle.pending, (state) => {
+        state.bicycle.isLoaded = false;
+        state.bicycle.error = null;
+      })
+      .addCase(fetchPostBicycle.fulfilled, (state, action) => {
+        state.bicycles.allbicycles = [
+          ...state.bicycles.allbicycles,
+          action.payload,
+        ];
+        state.bicycles.isLoaded = true;
+        state.bicycles.error = null;
       })
 
       .addMatcher(isError, (state, action) => {
         if (action.type === "bicycles/fetchOneBicycle/rejected") {
           state.bicycle.error = action.error.message;
+          state.bicycle.isLoaded = false;
+        } else if (action.type === "bicycles/fetchPostBicycle/rejected") {
+          state.bicycles.error = action.error.message;
           state.bicycle.isLoaded = false;
         } else {
           state.bicycles.error = action.error.message;

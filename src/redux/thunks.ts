@@ -1,5 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../axios";
+import { Data } from "@react-google-maps/api";
 
 export const fetchAllBicycles = createAsyncThunk<
   BicycleType[],
@@ -29,3 +30,12 @@ export const fetchOneBicycle = createAsyncThunk<
 
   return response.data;
 });
+
+export const fetchPostBicycle = createAsyncThunk<BicycleType, BicycleType>(
+  "bicycles/fetchPostBicycle",
+  async (params) => {
+    const { data } = await axios.post("/bicycles", params);
+
+    return data;
+  }
+);

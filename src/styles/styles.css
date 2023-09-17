@@ -1211,4 +1211,279 @@ footer .footer-section .container .content .agreement p {
   .contacts__item:nth-child(2n) .contacts__item-text {
     width: unset;
   }
+}
+.add-bicycle {
+  width: 100%;
+  height: 105px;
+  background-color: #101010;
+}
+.add-bicycle .container .add-bicycle__title {
+  padding-top: 185px;
+  padding-bottom: 48px;
+  font: 400 40px/49.2px "Bebas Neue", sans-serif;
+  color: #101010;
+}
+
+.form-add-bicycle .standart-btn {
+  margin-top: 40px;
+  margin-bottom: 108px;
+}
+.form-add-bicycle .form-add-bicycle__subtitle {
+  font: 500 18px/28.8px "Inter", sans-serif;
+}
+.form-add-bicycle .colors-block ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.form-add-bicycle .colors-block ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 58px;
+  background-color: #F8F8F8;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .form-add-bicycle .colors-block {
+    width: 100%;
+  }
+  .form-add-bicycle .colors-block ul {
+    justify-content: space-between;
+  }
+}
+.form-add-bicycle .select-multiple-options {
+  width: 351px;
+  height: 58px;
+  background-color: #F8F8F8;
+  border-radius: 10px;
+}
+.form-add-bicycle .select-multiple-options ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.form-add-bicycle .select-multiple-options ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 14px 0px;
+  box-sizing: border-box;
+  height: 30px;
+  width: 50px;
+  border-right: 2px solid #B3B3B3;
+  text-align: center;
+  cursor: pointer;
+}
+.form-add-bicycle .select-multiple-options ul li:last-child {
+  border: none;
+}
+.form-add-bicycle .select-multiple-options ul .XXS {
+  border-radius: 10px 0px 0px 10px;
+}
+.form-add-bicycle .select-multiple-options ul .XXL {
+  border-radius: 0px 10px 10px 0px;
+}
+.form-add-bicycle .select-multiple-options ul .XXS,
+.form-add-bicycle .select-multiple-options ul .XS,
+.form-add-bicycle .select-multiple-options ul .S,
+.form-add-bicycle .select-multiple-options ul .M,
+.form-add-bicycle .select-multiple-options ul .L,
+.form-add-bicycle .select-multiple-options ul .XL,
+.form-add-bicycle .select-multiple-options ul .XXL {
+  height: 100%;
+  background-color: #F57520;
+}
+@media (max-width: 576px) {
+  .form-add-bicycle .select-multiple-options {
+    width: 100%;
+  }
+  .form-add-bicycle .select-multiple-options ul {
+    justify-content: center;
+  }
+  .form-add-bicycle .select-multiple-options ul li {
+    width: 100%;
+  }
+}
+.form-add-bicycle .form-add-bicycle__switch-button {
+  display: flex;
+  align-items: center;
+}
+.form-add-bicycle .form-add-bicycle__switch-button .switch-btn {
+  margin-left: 108px;
+  position: relative;
+  width: 48px;
+  height: 24px;
+  border-radius: 100px;
+  border: 1px solid #F57520;
+}
+.form-add-bicycle .form-add-bicycle__switch-button .switch-btn .switch-btn__toggle {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+@media (max-width: 767px) {
+  .form-add-bicycle .form-add-bicycle__switch-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .form-add-bicycle .form-add-bicycle__switch-button .switch-btn {
+    margin-left: 0px;
+  }
+}
+.form-add-bicycle .form-add-bicycle__input-block,
+.form-add-bicycle .form-add-bicycle__switch-button,
+.form-add-bicycle .form-add-bicycle__select-multiple-options,
+.form-add-bicycle .form-add-bicycle__colors-block {
+  margin-top: 16px;
+}
+.form-add-bicycle .form-add-bicycle__input-block .form-add-bicycle__input-title,
+.form-add-bicycle .form-add-bicycle__switch-button .form-add-bicycle__input-title,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .form-add-bicycle__input-title,
+.form-add-bicycle .form-add-bicycle__colors-block .form-add-bicycle__input-title {
+  font: 400 16px/25.6px "Inter", sans-serif;
+  color: #4C4C4C;
+}
+.form-add-bicycle .form-add-bicycle__input-block .input-relative,
+.form-add-bicycle .form-add-bicycle__switch-button .input-relative,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .input-relative,
+.form-add-bicycle .form-add-bicycle__colors-block .input-relative {
+  position: relative;
+  margin-top: 8px;
+  height: 58px;
+  max-width: 1060px;
+}
+.form-add-bicycle .form-add-bicycle__input-block .input-relative .form-add-bicycle__input-string,
+.form-add-bicycle .form-add-bicycle__switch-button .input-relative .form-add-bicycle__input-string,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .input-relative .form-add-bicycle__input-string,
+.form-add-bicycle .form-add-bicycle__colors-block .input-relative .form-add-bicycle__input-string {
+  width: 100%;
+  height: 100%;
+  color: #101010;
+  background-color: #F8F8F8;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 60px 16px 16px;
+}
+.form-add-bicycle .form-add-bicycle__input-block .input-relative .form-add-bicycle__input-string::-moz-placeholder, .form-add-bicycle .form-add-bicycle__switch-button .input-relative .form-add-bicycle__input-string::-moz-placeholder, .form-add-bicycle .form-add-bicycle__select-multiple-options .input-relative .form-add-bicycle__input-string::-moz-placeholder, .form-add-bicycle .form-add-bicycle__colors-block .input-relative .form-add-bicycle__input-string::-moz-placeholder {
+  color: #B3B3B3;
+}
+.form-add-bicycle .form-add-bicycle__input-block .input-relative .form-add-bicycle__input-string::placeholder,
+.form-add-bicycle .form-add-bicycle__switch-button .input-relative .form-add-bicycle__input-string::placeholder,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .input-relative .form-add-bicycle__input-string::placeholder,
+.form-add-bicycle .form-add-bicycle__colors-block .input-relative .form-add-bicycle__input-string::placeholder {
+  color: #B3B3B3;
+}
+.form-add-bicycle .form-add-bicycle__input-block .input-relative .form-add-bicycle__input-string.error,
+.form-add-bicycle .form-add-bicycle__switch-button .input-relative .form-add-bicycle__input-string.error,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .input-relative .form-add-bicycle__input-string.error,
+.form-add-bicycle .form-add-bicycle__colors-block .input-relative .form-add-bicycle__input-string.error {
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 2px solid #F53A20;
+}
+.form-add-bicycle .form-add-bicycle__input-block .input-relative .input-absolute,
+.form-add-bicycle .form-add-bicycle__switch-button .input-relative .input-absolute,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .input-relative .input-absolute,
+.form-add-bicycle .form-add-bicycle__colors-block .input-relative .input-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.form-add-bicycle .form-add-bicycle__input-block select,
+.form-add-bicycle .form-add-bicycle__switch-button select,
+.form-add-bicycle .form-add-bicycle__select-multiple-options select,
+.form-add-bicycle .form-add-bicycle__colors-block select {
+  margin-top: 8px;
+  width: 324px;
+  height: 58px;
+  color: #101010;
+  background-color: #F8F8F8;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 60px 16px 16px;
+  /*for WebKit*/
+  -webkit-appearance: none;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: "";
+  /* for IE */
+  appearance: none !important;
+  background: url("/src/images/addBicycle/drop-down-arrow.svg") 96%/10% no-repeat #eee;
+}
+@media (max-width: 767px) {
+  .form-add-bicycle .form-add-bicycle__input-block select,
+  .form-add-bicycle .form-add-bicycle__switch-button select,
+  .form-add-bicycle .form-add-bicycle__select-multiple-options select,
+  .form-add-bicycle .form-add-bicycle__colors-block select {
+    width: 100%;
+    background: url("/src/images/addBicycle/drop-down-arrow.svg") 96%/5% no-repeat #eee;
+  }
+}
+.form-add-bicycle .form-add-bicycle__input-block .textarea-relative,
+.form-add-bicycle .form-add-bicycle__switch-button .textarea-relative,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .textarea-relative,
+.form-add-bicycle .form-add-bicycle__colors-block .textarea-relative {
+  margin-top: 8px;
+  position: relative;
+  max-width: 724px;
+  height: 100%;
+}
+.form-add-bicycle .form-add-bicycle__input-block .textarea-relative textarea,
+.form-add-bicycle .form-add-bicycle__switch-button .textarea-relative textarea,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .textarea-relative textarea,
+.form-add-bicycle .form-add-bicycle__colors-block .textarea-relative textarea {
+  padding: 16px 60px 16px 16px;
+  width: 100%;
+  height: 375px;
+  background-color: #F8F8F8;
+  color: #101010;
+  border: none;
+  border-radius: 10px;
+  resize: none;
+}
+.form-add-bicycle .form-add-bicycle__input-block .textarea-relative textarea::-moz-placeholder, .form-add-bicycle .form-add-bicycle__switch-button .textarea-relative textarea::-moz-placeholder, .form-add-bicycle .form-add-bicycle__select-multiple-options .textarea-relative textarea::-moz-placeholder, .form-add-bicycle .form-add-bicycle__colors-block .textarea-relative textarea::-moz-placeholder {
+  color: #B3B3B3;
+}
+.form-add-bicycle .form-add-bicycle__input-block .textarea-relative textarea::placeholder,
+.form-add-bicycle .form-add-bicycle__switch-button .textarea-relative textarea::placeholder,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .textarea-relative textarea::placeholder,
+.form-add-bicycle .form-add-bicycle__colors-block .textarea-relative textarea::placeholder {
+  color: #B3B3B3;
+}
+.form-add-bicycle .form-add-bicycle__input-block .textarea-relative textarea .input-absolute,
+.form-add-bicycle .form-add-bicycle__switch-button .textarea-relative textarea .input-absolute,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .textarea-relative textarea .input-absolute,
+.form-add-bicycle .form-add-bicycle__colors-block .textarea-relative textarea .input-absolute {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.form-add-bicycle .form-add-bicycle__input-block .textarea-relative .textarea-relative__error,
+.form-add-bicycle .form-add-bicycle__switch-button .textarea-relative .textarea-relative__error,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .textarea-relative .textarea-relative__error,
+.form-add-bicycle .form-add-bicycle__colors-block .textarea-relative .textarea-relative__error {
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 2px solid #F53A20;
+}
+.form-add-bicycle .form-add-bicycle__input-block .textarea-relative .textarea-absolute,
+.form-add-bicycle .form-add-bicycle__switch-button .textarea-relative .textarea-absolute,
+.form-add-bicycle .form-add-bicycle__select-multiple-options .textarea-relative .textarea-absolute,
+.form-add-bicycle .form-add-bicycle__colors-block .textarea-relative .textarea-absolute {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+}
+
+.message-error {
+  margin-top: 6px;
+  font: 400 14px/22.4px "Inter", sans-serif;
+  color: #F53A20;
 }/*# sourceMappingURL=styles.css.map */

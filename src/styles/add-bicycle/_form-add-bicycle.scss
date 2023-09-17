@@ -1,0 +1,259 @@
+@use "../global" as *;
+
+.form-add-bicycle {
+  & .standart-btn {
+    margin-top: 40px;
+    margin-bottom: 108px;
+  }
+
+  .form-add-bicycle__subtitle {
+    font: $title-d-hi4;
+  }
+
+  .colors-block {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 90px;
+        height: 58px;
+        background-color: $dd-gray;
+
+        cursor: pointer;
+      }
+    }
+
+    @media (max-width: $breakpoint_sm) {
+      width: 100%;
+      ul {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .select-multiple-options {
+    width: 351px;
+    height: 58px;
+    background-color: $dd-gray;
+    border-radius: 10px;
+
+    ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 14px 0px;
+        box-sizing: border-box;
+
+        height: 30px;
+        width: 50px;
+
+        border-right: 2px solid $gray-3;
+        text-align: center;
+
+        cursor: pointer;
+
+        &:last-child {
+          border: none;
+        }
+      }
+      .XXS {
+        border-radius: 10px 0px 0px 10px;
+      }
+      .XXL {
+        border-radius: 0px 10px 10px 0px;
+      }
+      .XXS,
+      .XS,
+      .S,
+      .M,
+      .L,
+      .XL,
+      .XXL {
+        height: 100%;
+        background-color: $bt-orange-normal;
+      }
+    }
+
+    @media (max-width: $breakpoint_sm) {
+      width: 100%;
+      ul {
+        justify-content: center;
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .form-add-bicycle__switch-button {
+    display: flex;
+    align-items: center;
+
+    .switch-btn {
+      margin-left: 108px;
+
+      position: relative;
+      width: 48px;
+      height: 24px;
+      border-radius: 100px;
+      border: 1px solid $bt-orange-normal;
+
+      .switch-btn__toggle {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+
+        transition: all 0.2s ease;
+      }
+    }
+
+    @media (max-width: $breakpoint_md) {
+      width: 100%;
+      justify-content: space-between;
+      .switch-btn {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .form-add-bicycle__input-block,
+  .form-add-bicycle__switch-button,
+  .form-add-bicycle__select-multiple-options,
+  .form-add-bicycle__colors-block {
+    margin-top: 16px;
+
+    .form-add-bicycle__input-title {
+      font: $text-d-pi1;
+      color: $gray-1;
+    }
+
+    .input-relative {
+      position: relative;
+
+      margin-top: 8px;
+
+      height: 58px;
+      max-width: 1060px;
+
+      .form-add-bicycle__input-string {
+        width: 100%;
+        height: 100%;
+
+        color: $black-1;
+        background-color: $dd-gray;
+
+        border: none;
+        border-radius: 10px;
+
+        padding: 16px 60px 16px 16px;
+        &::placeholder {
+          color: $gray-3;
+        }
+      }
+
+      .form-add-bicycle__input-string.error {
+        border-radius: 10px 10px 0px 0px;
+        border-bottom: 2px solid $red;
+      }
+
+      .input-absolute {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+      }
+    }
+
+    select {
+      margin-top: 8px;
+
+      width: 324px;
+      height: 58px;
+      color: $black-1;
+      background-color: $dd-gray;
+
+      border: none;
+      border-radius: 10px;
+
+      padding: 16px 60px 16px 16px;
+      /*for WebKit*/
+      -webkit-appearance: none;
+      /* for FF */
+      -moz-appearance: none;
+      text-indent: 0.01px;
+      text-overflow: "";
+      /* for IE */
+      -ms-appearance: none;
+      appearance: none !important;
+
+      background: url("/src/images/addBicycle/drop-down-arrow.svg") 96% / 10%
+        no-repeat #eee;
+
+      @media (max-width: $breakpoint_md) {
+        width: 100%;
+
+        background: url("/src/images/addBicycle/drop-down-arrow.svg") 96% / 5%
+          no-repeat #eee;
+      }
+    }
+    .textarea-relative {
+      margin-top: 8px;
+      position: relative;
+      max-width: 724px;
+      height: 100%;
+      textarea {
+        padding: 16px 60px 16px 16px;
+        width: 100%;
+        height: 375px;
+        background-color: $dd-gray;
+        color: $black-1;
+        border: none;
+        border-radius: 10px;
+
+        resize: none;
+
+        &::placeholder {
+          color: $gray-3;
+        }
+
+        .input-absolute {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 10px;
+        }
+      }
+
+      .textarea-relative__error {
+        border-radius: 10px 10px 0px 0px;
+        border-bottom: 2px solid $red;
+      }
+
+      .textarea-absolute {
+        position: absolute;
+        top: 16px;
+
+        right: 10px;
+      }
+    }
+  }
+}
+
+.message-error {
+  margin-top: 6px;
+  font: $text-d-pi4;
+  color: $red;
+}
