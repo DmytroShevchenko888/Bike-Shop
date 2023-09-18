@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { getImageUrl } from "../../helpers/getImageUrl";
+
 import {
   brandBicycles,
   categoryBicycles,
@@ -22,7 +22,6 @@ const FormAddBicycle: React.FunctionComponent<FormAddBicycleProps> = () => {
     register,
     handleSubmit,
     formState: { errors },
-    getValues,
   } = useForm<Inputs>({
     mode: "onBlur",
     defaultValues: { category: "" },

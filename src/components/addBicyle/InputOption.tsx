@@ -1,5 +1,4 @@
 import React from "react";
-import { categoryBicycles } from "../../constants";
 
 interface InputOptionProps {
   listElements: string[]; // The list Elements for drop down window "select/option"
