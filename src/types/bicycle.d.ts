@@ -1,7 +1,7 @@
 type BicycleType = {
   _id?: string;
   fullName: string;
-  category: String;
+  category: string;
   novelty: boolean;
   manufacturer: string;
   article: string;
@@ -22,8 +22,8 @@ type BicycleType = {
   fork?: string;
   chain?: string;
   brake?: string;
-  speed?: string;
-  garantine?: string;
+  speed?: number;
+  garantine?: number;
   user?: any;
   __v?: number;
   updatedAt?: string;

@@ -16,6 +16,7 @@ export const brandBicycles = [
   "Scott",
   "Orbea",
   "Tifosi",
+  "United",
   //... can add yet
 ];
 
@@ -34,7 +35,7 @@ export const categoryBicycles = [
   //... can add yet
 ];
 
-export const colorBicycles = [
+export const colorBicycles: ColorBicyclesType = [
   "black",
   "red",
   "yellow",
@@ -45,15 +46,28 @@ export const colorBicycles = [
   "gray",
   "white",
   "beige",
-  //... can add yet
+  "brown",
+  "olive",
+  "violet",
 ];
+
+export const materialBicycles = ["aluminum", "carbon", "steel"];
 
 export const ROUTES = {
   HOME: "/",
   NOT_FOUND: "*",
+  ADD_BICYCLE: "/add-bicycle",
 };
 
-export const sizeBicycles = ["XXS", "XS", "S", "M", "L", "XL", "XXL"];
+export const sizeBicycles: SizeBicyclesType = [
+  "XXS",
+  "XS",
+  "S",
+  "M",
+  "L",
+  "XL",
+  "XXL",
+];
 
 export const COUNT_PER_PAGE = 9;
 

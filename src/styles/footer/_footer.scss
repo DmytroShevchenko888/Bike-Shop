@@ -1,0 +1,187 @@
+@use "../global" as *;
+
+
+
+footer{
+  .mail-section{
+    background: $black-1;
+    .container{
+      background-image: url(/src/images/footer/footer.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: right;
+      .content{
+        padding: 40px 0;
+        h2{
+          font: $title-d-h2;
+          color: $tx-white;
+          padding-bottom: 32px;
+        }
+        .mail-section__content{
+          margin-bottom: 14px;
+
+          input{
+            width: 346px;
+            padding: 10px 16px;
+            border-radius: 5px;
+            border : 0 none;
+            font: $text-d-pi1;
+            margin-right: 16px;
+            &:focus::placeholder {
+              opacity: 0;
+              transition: opacity .5s;
+             }
+          }
+          .standart-btn{
+            width: 180px;
+            height: 46px;
+            border-radius: 5px;
+          }
+        }
+        .agreement-box{
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          .checkbox{
+            width: 24px;
+            height: 24px;
+            accent-color: $orange-1;
+          }
+          label{
+            color: $tx-white;
+            font: $text-d-pi3;
+          }
+        }
+      }
+    }
+  }
+  .footer-section{
+    background: $black-2;
+    padding-top: 91px;
+    .container{
+      .content{
+        .footer-section__content{
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 40px;
+          .content-logo{
+            .logo{
+              margin-bottom: 64px;
+            }
+            p{
+              font: $text-d-pi2;
+              color: $gray-3;
+              width: 289px;
+            }
+          }
+          .content-grid{
+            padding-top: 11px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            .content-1,.content-2,.content-3{
+              h3{
+                color: $tx-white;
+                font: $title-d-hi2;
+                margin-bottom: 16px;
+              }
+              p{
+                margin-top: 16px;
+                color: $tx-white;
+                font: $text-d-pi2;
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover{
+                    color:$bt-orange-hover;
+                }
+              }
+            }
+            .content-3{
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+              p{
+                margin-top: 0;
+              }
+              .item-1,.item-2,.item-3{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+              }
+            }
+          }
+        }
+        .agreement{
+          border-top: 1px solid $black-3;
+          display: flex;
+          gap: 24px;
+          padding: 16px 0 23px 0;
+          p{
+            font: $text-d-pi3;
+            color: $gray-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+  footer{
+    .footer-section{
+      .container{
+        .content{
+          .footer-section__content{
+            justify-content: space-between;
+            .content-grid{
+              display: block;
+              .content-1,.content-2{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint_md) {
+  footer{
+    .mail-section{
+      .container{
+        background-image: none;
+        .content{
+          h2{
+            font: $title-m-h2;
+          }
+          .mail-section__content{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            input{
+              width: 100%;
+            }
+            .standart-btn{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .footer-section{
+      padding-top: 40px;
+      .container{
+        .content{
+          .footer-section__content{
+            flex-direction: column;
+           .content-logo{
+            .logo{
+              margin-bottom: 31px;
+            }
+           }
+          }
+        }
+      }
+    }
+  }
+  }
