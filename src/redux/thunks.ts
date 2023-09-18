@@ -1,6 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../axios";
-import { Data } from "@react-google-maps/api";
 
 export const fetchAllBicycles = createAsyncThunk<
   BicycleType[],
