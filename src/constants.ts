@@ -35,6 +35,39 @@ export const categoryBicycles = [
   //... can add yet
 ];
 
+export const navCategories = [
+  {
+    category: "bicycles",
+    option: ["BMX",
+    "Cyclocross",
+    "Electric",
+    "Folding",
+    "Hybrid",
+    "Jump",
+    "Kids",
+    "MTB",
+    "Road",
+    "Touring",
+    "New"],
+  },
+  {
+    category: "parts",
+    option: ["part-1","part-2","part-3"]
+  },
+  {
+    category: "equipment",
+    option: ["equipment-1","equipment-2","equipment-3"]
+  },
+  {
+    category: "accessories",
+    option: ["accessories-1","accessories-2","accessories-3"]
+  },
+  {
+    category: "bike trainer",
+    option: ["trainer-1","trainer-2","trainer-3"]
+  },
+]
+
 export const colorBicycles: ColorBicyclesType = [
   "black",
   "red",

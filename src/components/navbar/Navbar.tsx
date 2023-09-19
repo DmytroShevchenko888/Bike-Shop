@@ -9,12 +9,14 @@ import {
 import { getImageUrl } from "../../helpers/getImageUrl";
 import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
-import { ROUTES } from "../../constants";
+import { ROUTES, navCategories } from "../../constants";
+import NavDropdown from "./NavDropdown";
 
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
+  const [navOptArr, setNavOptArr] = useState<string[]>([]);
 
   const closeNav = () => {
     setOpenNav(!openNav);
@@ -31,12 +33,16 @@ const Navbar: React.FC<NavbarProps> = () => {
             </Link>
           </div>
           <ul className="nav-menu">
-            <li>Trade in</li>
-            <li>bicycles</li>
-            <li>parts</li>
-            <li>equipment</li>
-            <li>accessories</li>
-            <li>bike trainer</li>
+            <li>
+              <span>Trade-in</span>
+            </li>
+            {navCategories.map((item, index) => (
+              <li key={index}>
+                {item.category}
+                <NavDropdown navOption={item.option} />
+              </li>
+            ))}
+            {/* <NavDropdown/> */}
           </ul>
           <div className="user-menu">
             <div className="search">
