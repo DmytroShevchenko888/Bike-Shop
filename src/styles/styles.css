@@ -1541,4 +1541,34 @@ footer .footer-section .container .content .agreement p {
   margin-top: 6px;
   font: 400 14px/22.4px "Inter", sans-serif;
   color: #F53A20;
+}
+
+.breadcrumbs {
+  padding: 33px 0px 31px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  font: 400 14px/22.4px "Inter", sans-serif;
+  color: white;
+}
+.breadcrumbs__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.breadcrumbs__container p {
+  padding: 0px 5px;
+}
+.breadcrumbs__item .breadcrumbs__link {
+  color: white;
+}
+.breadcrumbs__item .breadcrumbs__link.dark {
+  color: black;
+}
+.breadcrumbs__item:last-child .breadcrumbs__link {
+  color: #E1610C;
+}
+.breadcrumbs__item:not(:last-child)::after {
+  content: "/";
+  cursor: auto;
+  pointer-events: none;
+  margin: 0 5px;
 }/*# sourceMappingURL=styles.css.map */
