@@ -93,6 +93,10 @@ export const ROUTES = {
   HOME: "/",
   NOT_FOUND: "*",
   ADD_BICYCLE: "/add-bicycle",
+  BICYCLE: "/bicycle/:id",
+  VIEW_BICYCLE_BY_ID: (id: string) => {
+    return `/bicycle/${id}`;
+  },
 };
 
 export const sizeBicycles: SizeBicyclesType = [
@@ -202,11 +206,20 @@ export const BREADCRUMBS: BreadcrumbsItem[] = [
   },
 
   {
-    name: "MTB",
+    name: "category",
+    showName: (name: string) => {
+      return `${name}`;
+    },
     link: "#",
   },
   {
-    name: "Scott Scale 700 RS 2016",
+    name: "fullName",
+    showName: (name: string) => {
+      return `${name}`;
+    },
     link: "#",
   },
 ];
+
+export const HEIGHT_HEADER = 110; // site header height
+export const CHARS_SHORT_DESCRIPTION = 150; // number of characters to shorten the description

@@ -8,11 +8,11 @@ const AddBicycle: React.FC<AddBicycleProps> = () => {
     <section className="add-bicycle">
       {/*add-bicycle__header ? heigth: 105px; background-color: $bt-black; */}
       <div className="add-bicycle__header" />
-      <div className="container">
+      <main className="container">
         <h3 className="add-bicycle__title">Add New Bicycle:</h3>
 
         <FormAddBicycle />
-      </div>
+      </main>
     </section>
   );
 };

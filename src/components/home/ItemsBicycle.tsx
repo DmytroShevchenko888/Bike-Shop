@@ -39,6 +39,7 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
       image={obj.image}
       price={obj.price}
       priceSale={obj.priceSale}
+      id={obj._id}
       backgroundWhite
     />
   ));
@@ -53,6 +54,7 @@ const ItemsBicycle: React.FC<IItemsBicycleProps> = ({
         image={obj.image}
         price={obj.price}
         priceSale={obj.priceSale}
+        id={obj._id}
         backgroundWhite
       />
     ));

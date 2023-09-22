@@ -34,6 +34,12 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 @media (max-width: 1290px) {
   .container {
     padding: 0 40px;
@@ -781,10 +787,15 @@ footer .footer-section .container .content .agreement p {
   max-width: 368px;
 }
 .item-bicycle__fullName {
+  display: block;
   position: absolute;
   top: 321px;
   font: 300 18px/28.8px "Inter", sans-serif;
   letter-spacing: 1%;
+  cursor: pointer;
+}
+.item-bicycle__fullName:hover {
+  text-decoration: underline;
 }
 .item-bicycle__price {
   position: absolute;
@@ -1571,4 +1582,175 @@ footer .footer-section .container .content .agreement p {
   cursor: auto;
   pointer-events: none;
   margin: 0 5px;
+}
+
+.bicycle {
+  width: 100%;
+}
+.bicycle .bicycle__header {
+  height: 105px;
+  background-color: #101010;
+}
+.bicycle .bicycle__loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-window {
+  display: flex;
+  gap: 50px;
+}
+.order-window__image {
+  width: 50%;
+}
+.order-window__image img {
+  width: 100%;
+}
+.order-window__description {
+  width: 50%;
+}
+.order-window__description-title {
+  font: 400 40px/49.2px "Bebas Neue", sans-serif;
+}
+.order-window__description .text-gray {
+  font: 400 14px/22.4px "Inter", sans-serif;
+  color: #B3B3B3;
+}
+.order-window__description .text-availability-true, .order-window__description .text-availability-false {
+  font: 400 16px/25.6px "Inter", sans-serif;
+}
+.order-window__description .text-availability-true {
+  color: #4D932C;
+}
+.order-window__description .text-availability-false {
+  color: #F53A20;
+}
+.order-window__description .block-price {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  align-items: end;
+}
+.order-window__description .block-price h2 {
+  font: 500 40px/64px "Inter", sans-serif;
+}
+.order-window__description .block-price p {
+  font: 500 18px/28.8px "Inter", sans-serif;
+  color: #B3B3B3;
+  text-decoration: line-through;
+  padding-bottom: 10px;
+}
+.order-window__description .text-description {
+  margin-top: 40px;
+  font: 400 16px/25.6px "Inter", sans-serif;
+}
+.order-window__description .block-size p, .order-window__description .block-color p {
+  font: 500 18px/28.8px "Inter", sans-serif;
+  margin-top: 32px;
+  padding-bottom: 24px;
+}
+.order-window__description .block-size ul {
+  display: flex;
+  gap: 16px;
+}
+.order-window__description .block-size ul li {
+  width: 56px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+  font: 500 16px/19.68px "Inter", sans-serif;
+  cursor: pointer;
+}
+.order-window__description .block-color ul {
+  display: flex;
+  gap: 13px;
+}
+.order-window__description .block-color ul li {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.order-window__description .block-btn {
+  margin-top: 48px;
+  margin-bottom: 80px;
+  display: flex;
+  gap: 16px;
+}
+.order-window__description .block-btn__counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 500 16px/19.68px "Inter", sans-serif;
+  width: 123px;
+  height: 52px;
+  border: 1px solid #F8F8F8;
+  border-radius: 10px;
+}
+.order-window__description .block-btn__counter button {
+  width: 25%;
+}
+.order-window__description .block-btn__counter p {
+  text-align: center;
+  width: 50%;
+}
+.order-window__description .block-btn .inactive {
+  background-color: #B3B3B3;
+  cursor: not-allowed;
+}
+.order-window__description .block-btn__favorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #F8F8F8;
+  cursor: pointer;
+}
+.order-window__description .block-btn__favorite svg {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 1024px) {
+  .order-window {
+    flex-direction: column;
+  }
+  .order-window__image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .order-window__image img {
+    width: 50%;
+  }
+  .order-window__description {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .order-window__image img {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .order-window .block-btn {
+    flex-wrap: wrap;
+  }
+  .order-window .block-btn__counter {
+    width: calc(100% - 52px - 16px);
+  }
+  .order-window .block-btn__btn {
+    order: 3;
+    width: 100%;
+  }
+  .order-window .block-btn__favorite {
+    order: 2;
+  }
 }/*# sourceMappingURL=styles.css.map */

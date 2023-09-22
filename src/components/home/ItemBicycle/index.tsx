@@ -1,7 +1,13 @@
 import React from "react";
 import { getImageUrl } from "../../../helpers/getImageUrl";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../constants";
+import { useAppDispatch } from "../../../redux/hook";
+import { fetchOneBicycle } from "../../../redux/thunks";
+import { scrollToBottomHeader } from "../../../helpers/scrollToBottomHeader";
 
 interface ItemBicycleProps {
+  id: any;
   availability: boolean;
   image: string;
   fullName: string;
@@ -11,6 +17,7 @@ interface ItemBicycleProps {
 }
 
 const ItemBicycle: React.FC<ItemBicycleProps> = ({
+  id,
   availability,
   image,
   fullName,
@@ -18,6 +25,8 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
   priceSale,
   backgroundWhite,
 }) => {
+  const dispatch = useAppDispatch();
+
   const showFullName50chars = fullName.slice(0, 50) + "...";
   const arrImages = image.split(",");
   const titleImage = arrImages[0].trim();
@@ -39,7 +48,16 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
         src={`https://velo-shop-api.vercel.app/uploads/${titleImage}`}
         alt="foto"
       />
-      <p className="item-bicycle__fullName">{showFullName50chars}</p>
+      <Link
+        to={ROUTES.VIEW_BICYCLE_BY_ID(id)}
+        className="item-bicycle__fullName"
+        onClick={() => {
+          dispatch(fetchOneBicycle({ id: id }));
+          scrollToBottomHeader();
+        }}
+      >
+        {showFullName50chars}
+      </Link>
       {price === priceSale ? (
         <p className="item-bicycle__price">{price} $</p>
       ) : (

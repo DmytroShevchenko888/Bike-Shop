@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../redux/hook";
 
 export interface BreadcrumbsItem {
   name: string;
   link?: string;
+  showName?: (name: string) => string;
 }
 
 interface BreadcrumbsProps {
@@ -11,6 +13,13 @@ interface BreadcrumbsProps {
 }
 
 export const Breadcrumbs = ({ items, dark }: BreadcrumbsProps) => {
+  const fullName = useAppSelector(
+    (state) => state.bicycles.bicycle.currentbicycle?.fullName
+  );
+  const category = useAppSelector(
+    (state) => state.bicycles.bicycle.currentbicycle?.category
+  );
+
   return (
     <nav
       className="breadcrumbs"
@@ -24,7 +33,11 @@ export const Breadcrumbs = ({ items, dark }: BreadcrumbsProps) => {
                 className={`breadcrumbs__link ${dark ? "dark" : ""}`}
                 to={page.link || "#"}
               >
-                {page.name}
+                {page.showName && fullName && category
+                  ? page.name !== "category" // show fullName or Category
+                    ? page.showName(fullName)
+                    : page.showName(category)
+                  : page.name}
               </Link>
             </li>
           );
