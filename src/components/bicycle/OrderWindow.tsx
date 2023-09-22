@@ -12,7 +12,7 @@ const OrderWindow: React.FC<OrderWindowProps> = ({ bicycle }) => {
     bicycle.color[0] || ""
   );
   const [nameSize, setNameSize] = React.useState<string>("");
-  const arrImages = bicycle.image.split(",").map((item) => item.trim());
+  const arrImages = bicycle.image.split(",").map((item: string) => item.trim());
   const [showImage, setShowImage] = React.useState<string>(arrImages[0] || "");
 
   React.useEffect(() => {

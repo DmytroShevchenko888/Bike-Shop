@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../components/Breadcrumbs";
 import { BREADCRUMBS } from "../constants";
 import OrderWindow from "../components/bicycle/OrderWindow";
 import { useAppSelector } from "../redux/hook";
+import { ListCharacteristic } from "../components/bicycle/ListCharacteristic";
 
 interface BicycleProps {}
 
@@ -10,6 +11,10 @@ const Bicycle: React.FC<BicycleProps> = () => {
   const isLoaded = useAppSelector((state) => state.bicycles.bicycle.isLoaded);
   const currentbicycle = useAppSelector(
     (state) => state.bicycles.bicycle.currentbicycle
+  );
+
+  const showLoading = (
+    <section className="bicycle__loading">"LOADING..."</section>
   );
 
   return (
@@ -21,7 +26,17 @@ const Bicycle: React.FC<BicycleProps> = () => {
         {isLoaded && currentbicycle ? (
           <OrderWindow bicycle={currentbicycle} />
         ) : (
-          <section className="bicycle__loading">"LOADIND..."</section>
+          showLoading
+        )}
+
+        <h3 className="bicycle__subtitle">description</h3>
+        <p className="bicycle__text mb-80">{currentbicycle?.description}</p>
+
+        <h3 className="bicycle__subtitle">characteristic</h3>
+        {isLoaded && currentbicycle ? (
+          <ListCharacteristic bicycle={currentbicycle} />
+        ) : (
+          showLoading
         )}
       </main>
     </section>

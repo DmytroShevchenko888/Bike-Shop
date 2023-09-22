@@ -223,3 +223,70 @@ export const BREADCRUMBS: BreadcrumbsItem[] = [
 
 export const HEIGHT_HEADER = 110; // site header height
 export const CHARS_SHORT_DESCRIPTION = 150; // number of characters to shorten the description
+
+export const BICYCLE_CHARACTERISTIC = [
+  {
+    key: "color",
+    name: "Color",
+  },
+  {
+    key: "year",
+    name: "Year",
+  },
+  {
+    key: "category",
+    name: "Category",
+  },
+  {
+    key: "diameter",
+    name: "Wheel diameter",
+  },
+  {
+    key: "material",
+    name: "Frame material",
+  },
+  {
+    key: "size",
+    name: "Size",
+  },
+  {
+    key: "manufacturer",
+    name: "Manufacturer",
+  },
+  {
+    key: "tires",
+    name: "Tires",
+  },
+  {
+    key: "frame",
+    name: "Frame",
+  },
+  {
+    key: "seatpost",
+    name: "Seat Post",
+  },
+  {
+    key: "saddle",
+    name: "Saddle",
+  },
+  {
+    key: "fork",
+    name: "Fork",
+  },
+  {
+    key: "brake",
+    name: "Brake system",
+  },
+  {
+    key: "chain",
+    name: "Chain",
+  },
+  {
+    key: "speed",
+    name: "Speed",
+  },
+  {
+    key: "garantine",
+    name: "Garantine",
+  },
+];

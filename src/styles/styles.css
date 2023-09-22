@@ -1598,6 +1598,16 @@ footer .footer-section .container .content .agreement p {
   align-items: center;
   justify-content: center;
 }
+.bicycle .bicycle__subtitle {
+  margin-bottom: 40px;
+  font: 400 40px/49.2px "Bebas Neue", sans-serif;
+}
+.bicycle .bicycle__text {
+  font: 400 16px/25.6px "Inter", sans-serif;
+}
+.bicycle .bicycle__text.mb-80 {
+  margin-bottom: 80px;
+}
 
 .order-window {
   display: flex;
@@ -1753,4 +1763,29 @@ footer .footer-section .container .content .agreement p {
   .order-window .block-btn__favorite {
     order: 2;
   }
+}
+
+.list-characteristic {
+  margin-bottom: 80px;
+}
+
+.item-characteristic {
+  padding: 25px 24px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.item-characteristic:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+.item-characteristic__col-1, .item-characteristic__col-2 {
+  width: 50%;
+}
+.item-characteristic__col-1 {
+  font: 500 16px/19.68px "Inter", sans-serif;
+}
+.item-characteristic__col-2 {
+  text-align: end;
+  font: 300 18px/28.8px "Inter", sans-serif;
 }/*# sourceMappingURL=styles.css.map */
