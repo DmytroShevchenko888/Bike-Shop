@@ -212,13 +212,13 @@ export const BREADCRUMBS: BreadcrumbsItem[] = [
     },
     link: "#",
   },
-  {
-    name: "fullName",
-    showName: (name: string) => {
-      return `${name}`;
-    },
-    link: "#",
-  },
+  // {
+  //   name: "fullName",
+  //   showName: (name: string) => {
+  //     return `${name}`;
+  //   },
+  //   link: "#",
+  // },
 ];
 
 export const HEIGHT_HEADER = 110; // site header height

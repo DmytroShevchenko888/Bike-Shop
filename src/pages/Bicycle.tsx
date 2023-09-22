@@ -1,6 +1,6 @@
 import React from "react";
 import { Breadcrumbs } from "../components/Breadcrumbs";
-import { BREADCRUMBS } from "../constants";
+import { BREADCRUMBS, ROUTES } from "../constants";
 import OrderWindow from "../components/bicycle/OrderWindow";
 import { useAppSelector } from "../redux/hook";
 import { ListCharacteristic } from "../components/bicycle/ListCharacteristic";
@@ -17,12 +17,25 @@ const Bicycle: React.FC<BicycleProps> = () => {
     <section className="bicycle__loading">"LOADING..."</section>
   );
 
+  const newBreadcrumbs = [
+    ...BREADCRUMBS,
+    {
+      name: currentbicycle?.fullName,
+      link: ROUTES.VIEW_BICYCLE_BY_ID(currentbicycle?._id),
+    },
+  ];
+
   return (
     <section className="bicycle">
       {/*bicycle__header ? heigth: 105px; background-color: $bt-black; */}
       <div className="bicycle__header" />
       <main className="container">
-        <Breadcrumbs items={BREADCRUMBS} dark />
+        {isLoaded && currentbicycle ? (
+          <Breadcrumbs items={newBreadcrumbs} dark />
+        ) : (
+          "loading..."
+        )}
+
         {isLoaded && currentbicycle ? (
           <OrderWindow bicycle={currentbicycle} />
         ) : (
