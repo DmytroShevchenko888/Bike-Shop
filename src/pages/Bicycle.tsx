@@ -1,9 +1,10 @@
 import React from "react";
-import { Breadcrumbs } from "../components/Breadcrumbs";
+import { Breadcrumbs } from "../components/global/Breadcrumbs";
 import { BREADCRUMBS, ROUTES } from "../constants";
 import OrderWindow from "../components/bicycle/OrderWindow";
 import { useAppSelector } from "../redux/hook";
 import { ListCharacteristic } from "../components/bicycle/ListCharacteristic";
+import { SimilarItems } from "../components/global/SimilarItems";
 
 interface BicycleProps {}
 
@@ -51,6 +52,11 @@ const Bicycle: React.FC<BicycleProps> = () => {
         ) : (
           showLoading
         )}
+
+        <SimilarItems
+          nameCategory={currentbicycle?.category}
+          fullName={currentbicycle?.fullName}
+        />
       </main>
     </section>
   );

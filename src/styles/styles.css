@@ -96,6 +96,40 @@ a {
   background: #E1610C;
 }
 
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+.swiper-vertical .swiper-wrapper {
+  flex-direction: column;
+}
+
+.swiper-autoheight .swiper-wrapper {
+  align-items: flex-start;
+}
+
+.swiper-initialized .swiper-slide {
+  flex-shrink: 0;
+}
+
+.swiper-android .swiper-slide,
+.swiper-android .swiper-wrapper {
+  transform: translate3d(0, 0, 0);
+}
+
+.swiper-button-lock {
+  display: none !important;
+}
+
 .navbar {
   position: absolute;
   width: 100%;
@@ -1584,6 +1618,138 @@ footer .footer-section .container .content .agreement p {
   margin: 0 5px;
 }
 
+.similar-items {
+  margin-bottom: 160px;
+}
+.similar-items__subtitle {
+  margin-bottom: 80px;
+  font: 400 40px/49.2px "Bebas Neue", sans-serif;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.slider__left, .slider__right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 43px;
+  height: 43px;
+  z-index: 10;
+}
+.slider__left {
+  left: 0;
+}
+.slider__right {
+  right: 0;
+}
+
+.item-bike {
+  position: relative;
+  padding: 16px;
+  max-width: 400px;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: #FFFFFF;
+}
+.item-bike:hover {
+  background-color: #FFFFFF;
+  box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
+}
+.item-bike__flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px 0 10px 0px;
+}
+.item-bike__availability-true, .item-bike__availability-false {
+  float: right;
+  font: 400 16px/25.6px "Inter", sans-serif;
+}
+.item-bike__availability-true {
+  color: #4D932C;
+}
+.item-bike__availability-false {
+  color: #F53A20;
+}
+.item-bike__foto-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 280px;
+}
+.item-bike__foto {
+  padding-top: 10px;
+  width: 100%;
+}
+.item-bike__fullName {
+  display: block;
+  margin-bottom: 16px;
+  font: 300 18px/28.8px "Inter", sans-serif;
+  letter-spacing: 1%;
+  cursor: pointer;
+}
+.item-bike__fullName:hover {
+  text-decoration: underline;
+}
+.item-bike__price {
+  font: 500 16px/19.68px "Inter", sans-serif;
+  color: #777777;
+}
+.item-bike__blockPrice {
+  display: flex;
+  align-items: flex-end;
+}
+.item-bike__blockPrice_sale {
+  font: 500 16px/19.68px "Inter", sans-serif;
+  color: #777777;
+  margin-right: 8px;
+}
+.item-bike__blockPrice_price {
+  font: 500 12px/14.76px "Inter", sans-serif;
+  text-decoration: line-through;
+  color: #B3B3B3;
+}
+
+@media (max-width: 767px) {
+  .item-bike {
+    max-width: 768px;
+  }
+  .item-bike__availability-true, .item-bike__availability-false {
+    font: 400 16px/25.6px "Inter", sans-serif;
+  }
+  .item-bike__fullName {
+    font: 300 18px/28.8px "Inter", sans-serif;
+  }
+  .item-bike__price {
+    font: 500 16px/19.68px "Inter", sans-serif;
+  }
+  .item-bike__foto-block {
+    height: 350px;
+  }
+  .item-bike__foto {
+    width: 70%;
+  }
+  .item-bike__blockPrice_sale {
+    font: 500 16px/19.68px "Inter", sans-serif;
+  }
+  .item-bike__blockPrice_price {
+    font: 500 12px/14.76px "Inter", sans-serif;
+  }
+}
+@media (max-width: 576px) {
+  .item-bike__foto-block {
+    height: 350px;
+  }
+  .item-bike__foto {
+    width: 100%;
+  }
+}
 .bicycle {
   width: 100%;
 }

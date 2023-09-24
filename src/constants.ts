@@ -1,4 +1,4 @@
-import { BreadcrumbsItem } from "./components/Breadcrumbs";
+import { BreadcrumbsItem } from "./components/global/Breadcrumbs";
 import { getImageUrl } from "./helpers/getImageUrl";
 
 export const brandBicycles = [
@@ -290,3 +290,8 @@ export const BICYCLE_CHARACTERISTIC = [
     name: "Garantine",
   },
 ];
+
+export const BREAKPOINT_XXL = 1290;
+export const BREAKPOINT_XL = 1024;
+export const BREAKPOINT_MD = 767;
+export const BREAKPOINT_SM = 576;

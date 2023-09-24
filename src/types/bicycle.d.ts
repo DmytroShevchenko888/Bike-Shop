@@ -1,5 +1,5 @@
 type BicycleType = {
-  [_id?: string]: any;
+  [_id: string]: any;
   [fullName: string]: any;
   [category: string]: any;
   [novelty: boolean]: any;

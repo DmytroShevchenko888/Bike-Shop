@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useAppSelector } from "../redux/hook";
+import { useAppSelector } from "../../redux/hook";
 
 export interface BreadcrumbsItem {
   name: string;
