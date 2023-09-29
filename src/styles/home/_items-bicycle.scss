@@ -7,6 +7,7 @@
 .items-bicycle {
   // position: relative;
   width: 100%;
+  // min-height: 100vh;
   margin-bottom: 0px;
   padding-bottom: 0px; //___________?
   z-index: 10;
@@ -15,31 +16,28 @@
   justify-content: center;
   align-items: center;
 
-  // background-color: yellow;
-
   &__block {
-    // background-color: red;
     height: 100%;
     width: 100%;
 
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 400px);
-    grid-template-rows: repeat(3, 443px);
+
+    grid-template-rows: repeat(3, 529px);
     column-gap: 40px;
     row-gap: 16px;
   }
 
-  &__btn {
+  &__block-btn {
+    height: 140px;
+
     display: flex;
     justify-content: center;
-    margin: 48px 0px 80px 0px;
+    align-items: center;
+  }
 
-    // position: absolute;
-
-    // bottom: 20px;
-    // left: 50%;
-    // transform: translateX(-50%);
-
+  &__btn {
     font: $text-d-pi3;
   }
   &__btn.white-text {
@@ -51,7 +49,7 @@
   .items-bicycle {
     &__block {
       grid-template-columns: repeat(2, 400px);
-      grid-template-rows: repeat(5, 443px);
+      grid-template-rows: repeat(5, 529px);
     }
   }
 }
@@ -59,7 +57,7 @@
   .items-bicycle {
     &__block {
       grid-template-columns: repeat(1, 400px);
-      grid-template-rows: repeat(9, 443px);
+      grid-template-rows: repeat(9, 529px);
     }
   }
 }

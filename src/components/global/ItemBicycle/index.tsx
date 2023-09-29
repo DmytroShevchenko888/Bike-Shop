@@ -31,6 +31,8 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
   const arrImages = image.split(",");
   const titleImage = arrImages[0].trim();
 
+  console.log(fullName);
+
   return (
     <div className={`item-bicycle ${backgroundWhite ? "bg-white" : ""}`}>
       <img
@@ -43,11 +45,14 @@ const ItemBicycle: React.FC<ItemBicycleProps> = ({
       ) : (
         <span className="item-bicycle__availability-false">sold out</span>
       )}
-      <img
-        className="item-bicycle__foto"
-        src={`https://velo-shop-api.vercel.app/uploads/${titleImage}`}
-        alt="foto"
-      />
+      <div className="item-bicycle__block-foto">
+        <img
+          className="item-bicycle__foto"
+          src={`https://velo-shop-api.vercel.app/uploads/${titleImage}`}
+          alt="foto"
+        />
+      </div>
+
       <Link
         to={ROUTES.VIEW_BICYCLE_BY_ID(id)}
         className="item-bicycle__fullName"

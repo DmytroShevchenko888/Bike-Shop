@@ -1,0 +1,202 @@
+@use "../global" as *;
+
+.item-bicycle.bg-white {
+  background-color: $bg-white;
+}
+
+.item-bicycle__btn.inactive {
+  background-color: $gray-3;
+}
+
+.item-bicycle {
+  position: relative;
+
+  padding: 16px;
+
+  height: 529px;
+  min-width: 400px;
+  border-radius: 10px;
+
+  user-select: none;
+  background-color: $bg-white;
+
+  z-index: 10;
+  &:hover {
+    box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
+
+    .inactive {
+      background-color: $gray-3;
+      cursor: not-allowed;
+    }
+  }
+
+  &__flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-radius: 10px 0 10px 0px;
+  }
+
+  &__availability-true,
+  &__availability-false {
+    float: right;
+    font: $text-d-pi1;
+  }
+
+  &__availability-true {
+    color: $green;
+  }
+  &__availability-false {
+    color: $red;
+  }
+
+  &__block-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &__foto {
+    padding-top: 10px;
+    max-height: 220px;
+  }
+
+  &__fullName {
+    display: block;
+    position: absolute;
+    top: 321px;
+    margin-right: 16px;
+
+    font: $title-d-hi5;
+    letter-spacing: 1%;
+
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    top: 403px;
+
+    font: $text-d-btn;
+    color: $gray-2;
+  }
+
+  &__blockPrice {
+    position: absolute;
+    top: 403px;
+
+    display: flex;
+    align-items: flex-end;
+
+    &_sale {
+      font: $text-d-btn;
+      color: $gray-2;
+      margin-right: 8px;
+    }
+
+    &_price {
+      font: $text-d-pi7;
+      text-decoration: line-through;
+      color: $gray-3;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 32px);
+
+    p {
+      font: $text-d-btn;
+      margin-left: 4px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint_xxl) {
+}
+
+@media (max-width: $breakpoint_md) {
+  .item-bicycle {
+    padding: 16px;
+
+    height: 529px;
+
+    &__availability-true,
+    &__availability-false {
+      font: $text-m-pi1;
+    }
+
+    &__fullName {
+      font: $title-m-hi5;
+    }
+
+    &__price {
+      font: $text-m-btn;
+    }
+
+    &__blockPrice {
+      &_sale {
+        font: $text-m-btn;
+      }
+
+      &_price {
+        font: $text-m-pi7;
+      }
+    }
+
+    .item-bicycle__btn {
+      position: absolute;
+      bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% - 32px);
+      z-index: 100;
+
+      p {
+        font: $text-m-btn;
+        margin-left: 4px;
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint_sm) {
+  .item-bicycle {
+    min-width: 100%;
+
+    &:hover {
+      background-color: $bg-white;
+      box-shadow: 2px 9px 21px 0px rgba(186, 186, 186, 0.2);
+
+      .inactive {
+        background-color: $gray-3;
+        cursor: not-allowed;
+      }
+    }
+
+    &__foto {
+      max-width: 100%;
+      max-height: 220px;
+
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      padding: 20px;
+    }
+
+    &__fullName {
+      font: $title-m-hi5;
+    }
+  }
+}

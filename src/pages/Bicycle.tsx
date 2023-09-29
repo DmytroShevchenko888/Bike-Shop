@@ -4,7 +4,7 @@ import { BREADCRUMBS, ROUTES } from "../constants";
 import OrderWindow from "../components/bicycle/OrderWindow";
 import { useAppSelector } from "../redux/hook";
 import { ListCharacteristic } from "../components/bicycle/ListCharacteristic";
-import { SimilarItems } from "../components/global/SimilarItems";
+import { SimilarItems } from "../components/global/SimilarItems/SimilarItems";
 
 interface BicycleProps {}
 
