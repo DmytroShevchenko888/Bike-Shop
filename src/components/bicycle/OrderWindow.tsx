@@ -88,6 +88,9 @@ const OrderWindow: React.FC<OrderWindowProps> = ({ bicycle }) => {
                 style={{
                   backgroundColor: color,
                   border: `${color === nameColor ? "5px solid #E5E5E5" : ""}`,
+                  borderColor: `${color === "white" ? "#E5E5E5" : ""}`,
+                  borderWidth: `${color === "white" ? "1px" : ""}`,
+                  borderStyle: `${color === "white" ? "solid" : ""}`,
                 }}
                 onClick={() => setColor(color)}
               />
