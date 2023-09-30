@@ -160,6 +160,7 @@ a {
   color: #F57F2A;
 }
 .navbar .container .content .nav-menu li:hover .drop-container {
+  cursor: default;
   pointer-events: auto;
   opacity: 1;
   color: #FFFFFF;
@@ -233,6 +234,10 @@ a {
   gap: 24px;
   font: 400 14px/22.4px "Inter", sans-serif;
 }
+.drop-container .drop-box .nav-option li {
+  max-width: 50px;
+}
+
 @media (max-width: 1290px) {
   .navbar .container .content .nav-menu {
     display: none;

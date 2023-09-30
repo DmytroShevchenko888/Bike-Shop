@@ -26,6 +26,7 @@
                     &:hover{
                         color:$bt-orange-hover;
                         .drop-container{
+                          cursor: default;
                           pointer-events: auto;
                           opacity: 1;
                           color:$tx-white;
@@ -126,7 +127,7 @@
       gap: 24px;
       font: $text-d-pi4;
       li{
-
+      max-width: 50px;
       }
     }
   }
