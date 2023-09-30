@@ -1,3 +1,4 @@
+import { BreadcrumbsItem } from "./components/global/Breadcrumbs";
 import { getImageUrl } from "./helpers/getImageUrl";
 
 export const brandBicycles = [
@@ -35,6 +36,41 @@ export const categoryBicycles = [
   //... can add yet
 ];
 
+export const navCategories = [
+  {
+    category: "bicycles",
+    option: [
+      "BMX",
+      "Cyclocross",
+      "Electric",
+      "Folding",
+      "Hybrid",
+      "Jump",
+      "Kids",
+      "MTB",
+      "Road",
+      "Touring",
+      "New",
+    ],
+  },
+  {
+    category: "parts",
+    option: ["part-1", "part-2", "part-3"],
+  },
+  {
+    category: "equipment",
+    option: ["equipment-1", "equipment-2", "equipment-3"],
+  },
+  {
+    category: "accessories",
+    option: ["accessories-1", "accessories-2", "accessories-3"],
+  },
+  {
+    category: "bike trainer",
+    option: ["trainer-1", "trainer-2", "trainer-3"],
+  },
+];
+
 export const colorBicycles: ColorBicyclesType = [
   "black",
   "red",
@@ -57,6 +93,10 @@ export const ROUTES = {
   HOME: "/",
   NOT_FOUND: "*",
   ADD_BICYCLE: "/add-bicycle",
+  BICYCLE: "/bicycle/:id",
+  VIEW_BICYCLE_BY_ID: (id: string) => {
+    return `/bicycle/${id}`;
+  },
 };
 
 export const sizeBicycles: SizeBicyclesType = [
@@ -154,3 +194,104 @@ export const coordinatesMapsDnipro: CoordinatesType = {
   lat: 48.4708749,
   lng: 35.0353394,
 };
+
+export const BREADCRUMBS: BreadcrumbsItem[] = [
+  {
+    name: "main",
+    link: ROUTES.HOME,
+  },
+  {
+    name: "bicycles",
+    link: "#",
+  },
+
+  {
+    name: "category",
+    showName: (name: string) => {
+      return `${name}`;
+    },
+    link: "#",
+  },
+  // {
+  //   name: "fullName",
+  //   showName: (name: string) => {
+  //     return `${name}`;
+  //   },
+  //   link: "#",
+  // },
+];
+
+export const HEIGHT_HEADER = 110; // site header height
+export const CHARS_SHORT_DESCRIPTION = 150; // number of characters to shorten the description
+
+export const BICYCLE_CHARACTERISTIC = [
+  {
+    key: "color",
+    name: "Color",
+  },
+  {
+    key: "year",
+    name: "Year",
+  },
+  {
+    key: "category",
+    name: "Category",
+  },
+  {
+    key: "diameter",
+    name: "Wheel diameter",
+  },
+  {
+    key: "material",
+    name: "Frame material",
+  },
+  {
+    key: "size",
+    name: "Size",
+  },
+  {
+    key: "manufacturer",
+    name: "Manufacturer",
+  },
+  {
+    key: "tires",
+    name: "Tires",
+  },
+  {
+    key: "frame",
+    name: "Frame",
+  },
+  {
+    key: "seatpost",
+    name: "Seat Post",
+  },
+  {
+    key: "saddle",
+    name: "Saddle",
+  },
+  {
+    key: "fork",
+    name: "Fork",
+  },
+  {
+    key: "brake",
+    name: "Brake system",
+  },
+  {
+    key: "chain",
+    name: "Chain",
+  },
+  {
+    key: "speed",
+    name: "Speed",
+  },
+  {
+    key: "garantine",
+    name: "Garantine",
+  },
+];
+
+export const BREAKPOINT_XXL = 1290;
+export const BREAKPOINT_XL = 1024;
+export const BREAKPOINT_MD = 767;
+export const BREAKPOINT_SM = 576;

@@ -39,18 +39,23 @@ body {
   //padding: 0 40px;
 }
 
-  @media (max-width: $breakpoint_xxl) {
-    .container{
-      padding: 0 40px;
-    }
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 
-  @media (max-width: $breakpoint_md) {
-    .container{
-      padding: 0 20px;
-    }
+@media (max-width: $breakpoint_xxl) {
+  .container {
+    padding: 0 40px;
   }
+}
 
+@media (max-width: $breakpoint_md) {
+  .container {
+    padding: 0 20px;
+  }
+}
 
 *::-webkit-scrollbar {
   width: 10px;

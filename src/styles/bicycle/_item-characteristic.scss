@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+.item-characteristic {
+  padding: 25px 24px;
+
+  width: 100%;
+
+  display: flex;
+  gap: 40px;
+
+  align-items: center;
+
+  &:nth-child(2n) {
+    background-color: $dd-gray;
+  }
+
+  &__col-1,
+  &__col-2 {
+    width: 50%;
+  }
+
+  &__col-1 {
+    font: $text-d-btn;
+  }
+  &__col-2 {
+    text-align: end;
+    font: $title-d-hi5;
+  }
+}

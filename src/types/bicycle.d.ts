@@ -1,14 +1,14 @@
 type BicycleType = {
-  _id?: string;
-  fullName: string;
-  category: string;
-  novelty: boolean;
-  manufacturer: string;
-  article: string;
-  image: string;
-  availability: boolean;
-  price: number;
-  priceSale: number;
+  [_id: string]: any;
+  [fullName: string]: any;
+  [category: string]: any;
+  [novelty: boolean]: any;
+  [manufacturer: string]: any;
+  [article: string]: any;
+  [image: string]: any;
+  [availability: boolean]: any;
+  [price: number]: any;
+  [priceSale: number]: any;
   size: string[];
   color: string[];
   description: string;

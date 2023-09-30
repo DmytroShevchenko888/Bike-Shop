@@ -19,16 +19,69 @@
                 color: $tx-white;
                 font: $text-d-pi6;
                 text-transform: uppercase;
-                    li{
-                        cursor: pointer;
-                        transition: all 0.3s;
-                        &:hover{
-                            color:$bt-orange-hover;
+                li{
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    position: relative;
+                    &:hover{
+                        color:$bt-orange-hover;
+                        .drop-container{
+                          cursor: default;
+                          pointer-events: auto;
+                          opacity: 1;
+                          color:$tx-white;
+                          transform: translateY(0);
                         }
-                        &:first-child {
-                            color: $tx-orange;
-                        }  
                     }
+                    span {
+                        color: $tx-orange;
+                    }
+                    &:nth-child(2){
+                      .drop-container{
+                        .drop-box{
+                          background-image: url(/src/images/navbar/navBike.png);
+                          background-repeat: no-repeat;
+                          background-position: bottom 0 right 50%;
+                        }
+                      }
+                    }
+                    &:nth-child(3){
+                      .drop-container{
+                        .drop-box{
+                          background-image: url(/src/images/navbar/navParts.png);
+                          background-repeat: no-repeat;
+                          background-position: bottom 0 right 50%;
+                        }
+                      }
+                    }
+                    &:nth-child(4){
+                      .drop-container{
+                        .drop-box{
+                          background-image: url(/src/images/navbar/navEquipment.png);
+                          background-repeat: no-repeat;
+                          background-position: bottom 0 right 50%;
+                        }
+                      }
+                    }
+                    &:nth-child(5){
+                      .drop-container{
+                        .drop-box{
+                          background-image: url(/src/images/navbar/navAccessories.png);
+                          background-repeat: no-repeat;
+                          background-position: bottom 0 right 0;
+                        }
+                      }
+                    }
+                    &:nth-child(6){
+                      .drop-container{
+                        .drop-box{
+                          background-image: url(/src/images/navbar/navTrainer.png);
+                          background-repeat: no-repeat;
+                          background-position: bottom 0 right 50%;
+                        }
+                      }
+                    }
+                  }
                 }
             .user-menu{
                 color: $tx-white;
@@ -43,16 +96,41 @@
                         color:$bt-orange-hover;
                     }
                 }
-                
+
                 .burger-menu{
                     margin-left: 58px;
                     color: $tx-white;
                 }
-                
+
             }
-            
+
         }
     }
+}
+
+.drop-container{
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  padding-top: 16px;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  .drop-box{
+    background-color: $black-1;
+    border: 1px solid $gray-1;
+    border-radius: 10px;
+    width: 500px;
+    .nav-option{
+      padding: 40px 40px 137px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      font: $text-d-pi4;
+      li{
+      max-width: 50px;
+      }
+    }
+  }
 }
 
 @media (max-width: $breakpoint_xxl) {

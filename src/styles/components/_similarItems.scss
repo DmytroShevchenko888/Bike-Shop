@@ -1,0 +1,10 @@
+@use "../global" as *;
+
+.similar-items {
+  margin-bottom: 160px;
+  &__subtitle {
+    margin-bottom: 80px;
+
+    font: $title-d-h3;
+  }
+}

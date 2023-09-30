@@ -1,5 +1,5 @@
 import React from "react";
-import ItemsBicycle from "./ItemsBicycle";
+import ItemsBicycle from "./ItemsBicycle/ItemsBicycle";
 import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { useAppSelector } from "../../redux/hook";
 import { COUNT_PER_PAGE } from "../../constants";

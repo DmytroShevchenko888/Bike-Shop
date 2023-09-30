@@ -22,7 +22,8 @@
     "react-router-dom": "^6.15.0",
     "redux": "^4.2.1",
     "redux-saga": "^1.2.3",
-    "sass": "^1.65.1"
+    "sass": "^1.65.1",
+    "swiper": "^10.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.20",

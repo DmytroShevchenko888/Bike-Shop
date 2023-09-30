@@ -1,0 +1,31 @@
+@use "../global" as *;
+
+.bicycle {
+  width: 100%;
+  .bicycle__header {
+    height: $height_header;
+    background-color: $bt-black;
+  }
+
+  .bicycle__loading {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bicycle__subtitle {
+    margin-bottom: 40px;
+    font: $title-d-h3;
+  }
+
+  .bicycle__text {
+    font: $text-d-pi1;
+  }
+
+  .bicycle__text.mb-80 {
+    margin-bottom: 80px;
+  }
+}
