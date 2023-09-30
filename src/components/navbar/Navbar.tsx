@@ -16,7 +16,6 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
-  const [navOptArr, setNavOptArr] = useState<string[]>([]);
 
   const closeNav = () => {
     setOpenNav(!openNav);
