@@ -283,8 +283,10 @@ a {
 .sidebar .container .content .box-category {
   display: none;
 }
-.sidebar .container .content .info-box {
+.sidebar .container .content .info-box,
+.sidebar .container .content .registration {
   margin-left: 40px;
+  margin-right: 40px;
   margin-top: 104px;
 }
 .sidebar .container .content .info-box h3 {
@@ -302,6 +304,26 @@ a {
 }
 .sidebar .container .content .info-box p:hover {
   color: #F57F2A;
+}
+.sidebar .container .content .registration {
+  width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 104px;
+}
+.sidebar .container .content .registration__header {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+}
+.sidebar .container .content .registration__header button {
+  font: 500 18px/28.8px "Inter", sans-serif;
+  color: #777777;
+}
+.sidebar .container .content .registration__header button.active {
+  color: #101010;
+  font: 500 24px/38.4px "Inter", sans-serif;
 }
 
 .active {
@@ -391,12 +413,51 @@ a {
   .sidebar .container .content .info-box p {
     margin-top: 16px;
   }
+  .sidebar .container .content .registration {
+    margin-top: 104px;
+  }
 }
 @media (max-width: 576px) {
   .sidebar {
     width: 100%;
   }
 }
+.form-registration {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form-registration label {
+  font: 400 16px/25.6px "Inter", sans-serif;
+  color: #4C4C4C;
+}
+.form-registration input {
+  margin-top: 8px;
+  padding: 0px 10px;
+  width: 100%;
+  height: 58px;
+  display: block;
+  font: 400 16px/25.6px "Inter", sans-serif;
+  color: #101010;
+  background-color: #F8F8F8;
+  border: none;
+  border-radius: 10px;
+}
+.form-registration__btn .btn {
+  width: 100%;
+}
+.form-registration__btn span {
+  display: inline;
+  color: #4C4C4C;
+  font: 500 18px/28.8px "Inter", sans-serif;
+}
+.form-registration__btn p {
+  padding-left: 5px;
+  display: inline;
+}
+
 footer .mail-section {
   background: #101010;
 }

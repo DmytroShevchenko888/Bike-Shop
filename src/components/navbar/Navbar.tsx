@@ -16,14 +16,36 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
   const [openNav, setOpenNav] = useState<boolean>(false);
+  const [showMenu, setMenu] = useState<boolean>(false);
+  const [showRegistration, setShowRegistration] = useState<boolean>(false);
 
-  const closeNav = () => {
-    setOpenNav(!openNav);
+  const openNavProfile = () => {
+    setOpenNav(true);
+    setShowRegistration(true);
+    setMenu(false);
+  };
+
+  const openMenu = () => {
+    setOpenNav(true);
+    setMenu(true);
+    setShowRegistration(false);
+  };
+
+  const closeNavProfile = () => {
+    setOpenNav(false);
+    setShowRegistration(false);
+    setMenu(false);
   };
 
   return (
     <header className="navbar">
-      <Sidebar openNav={openNav} closeNav={closeNav} />
+      <Sidebar
+        closeNavProfile={closeNavProfile}
+        openMenu={openMenu}
+        showMenu={showMenu}
+        showRegistration={showRegistration}
+        openNav={openNav}
+      />
       <div className="container">
         <div className="content">
           <div className="bike-logo">
@@ -47,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <div className="search">
               <CiSearch />
             </div>
-            <div className="profile">
+            <div className="profile" onClick={openNavProfile}>
               <CiUser />
             </div>
             <div className="favorite">
@@ -56,7 +78,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <div className="shopping-cart">
               <CiShoppingCart />
             </div>
-            <div className="burger-menu" onClick={closeNav}>
+            <div className="burger-menu" onClick={openMenu}>
               <CiMenuFries />
             </div>
           </div>
